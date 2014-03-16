@@ -87,8 +87,8 @@ function selectUser(user) {
 	$('#user-list').css({left: shift, right: -shift});
 
 	// Show the password form, clear and focus it.
-	$('#password-container').removeClass('hidden').find('input').val('').focus();
 	$('#password').removeAttr('disabled');
+	$('#password-container').removeClass('hidden').find('input').val('').focus();
 
 	activeUser = user;
 	var userData = user.data('user');
