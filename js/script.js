@@ -1,7 +1,7 @@
 // Constants
 var AUTHENTICATION_BEGIN_MESSAGE = "Logging in...";
 var AUTHENTICATION_SUCCUESS_MESSAGE = ""; // Should never actually show.
-var AUTHENTICATION_FAILURE_MESSAGE = "Incorrect password"
+var AUTHENTICATION_FAILURE_MESSAGE = "Incorrect password";
 var PLACEHOLDER_COLOURS = [
     '#FF6138',
     '#FFFF9D',
@@ -22,7 +22,7 @@ var availableUsers = [];
  */
 function generateUserList() {
     var userList = $('#user-list');
-    for (i in lightdm.users) {
+    for (var i in lightdm.users) {
         var user = lightdm.users[i];
         var userListEntry = $('<div />', {
             class: 'user'
@@ -91,7 +91,7 @@ function selectUser(user) {
     // Compare the data attribute because javascript does weird things. I think
     // it's doing the assignment to activeUser by value but then comparing by
     // memory address? Maybe? TODO: Work this out.
-    if (activeUser != null && activeUser.data('user') == user.data('user')) {
+    if (activeUser !== null && activeUser.data('user') == user.data('user')) {
         unselect();
         return false;
     }
@@ -147,7 +147,7 @@ function unselect() {
  */
 function doAuthentication(password) {
     // This shouldn't happen, but don't try to authenticate with a null user.
-    if (activeUser == null) {
+    if (activeUser === null) {
         return false;
     }
 
@@ -219,7 +219,7 @@ $(document).ready(function () {
             return;
         }
         doAuthentication($(this).val());
-    })
+    });
     window.authentication_complete = function () {
         finishAuthentication();
     };
