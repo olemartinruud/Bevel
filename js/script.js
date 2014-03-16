@@ -128,7 +128,13 @@ function doAuthentication(password) {
 
 function finishAuthentication() {
 	if (lightdm.is_authenticated) {
-		lightdm.login(lightdm.authentication_user, lightdm.default_session);
+		$('body').animate({'opacity': '0'}, 400);
+
+		// Wait a moment before actually logging in so we have time to fade out the
+		// controls.
+		setTimeout(function() {
+			lightdm.login(lightdm.authentication_user, lightdm.default_session);
+		}, 500);
 	} else {
 		// Authentication failed. Reset the password form and display a message.
 		authenticating = false;
@@ -169,6 +175,6 @@ $(document).ready(function() {
 	window.authentication_complete = function() {finishAuthentication();};
 	
 	// Ready to go! Fade in the login screen.
-	$('body').animate({'opacity': '1'});
+	$('body').animate({'opacity': '1'}, 400);
 });
 
