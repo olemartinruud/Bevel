@@ -29,10 +29,10 @@ function generateUserList() {
 		// Add an image to represent the user. If no .face image is available, use a
 		// colour from the palette.
 		var userImage = $('<div />', {class: 'bubble'});
+		// Set the background colour regardless since the user.image path might be invalid.
+		userImage.css({backgroundColor: PLACEHOLDER_COLOURS[i % PLACEHOLDER_COLOURS.length]});
 		if (user.image.length > 0) {
 			userImage.css({'background-image': 'url('+user.image+')'});
-		} else {
-			userImage.css({backgroundColor: PLACEHOLDER_COLOURS[i % PLACEHOLDER_COLOURS.length]});
 		}
 		userImage.appendTo(userListEntry);
 
@@ -67,9 +67,24 @@ function selectUser(user) {
 	// Selecting a user shouldn't interrupt a login attempt.
 	if (authenticating) { return false; }
 
+	// Selecting the active user should be treated as unselecting.
+	// Compare the data attribute because javascript does weird things. I think
+	// it's doing the assignment to activeUser by value but then comparing by
+	// memory address? Maybe? TODO: Work this out.
+	if (activeUser != null && activeUser.data('user') == user.data('user')) {
+		unselect();
+		return false;
+	}
+
 	// Dim all users except for this one.
 	user.parent().children().addClass('hidden').removeClass('active');
 	user.addClass('active').removeClass('hidden');
+
+	// Move the selected user's image to the centre.
+	var index = user.index() + 1;
+	var total = user.siblings().length + 1;
+	var shift = ((total + 1) / 2 - index) * user.outerWidth(true);
+	$('#user-list').css({left: shift, right: -shift});
 
 	// Show the password form, clear and focus it.
 	$('#password-container').removeClass('hidden').find('input').val('').focus();
@@ -78,6 +93,22 @@ function selectUser(user) {
 	activeUser = user;
 	var userData = user.data('user');
 	lightdm.start_authentication(userData.name);
+}
+
+// Unselects (deselects?) the currently selected user.
+function unselect() {
+	// Unselecting a user shouldn't interrupt a login attempt.
+	if (authenticating) { return false; }
+
+	// Reset the user divs.
+	activeUser.parent().children().removeClass('hidden').removeClass('active');
+	$('#user-list').css({left: 0, right: 0});
+
+	// Hide the password entry. Also disable it so it loses focus.
+	$('#password-container').addClass('hidden')
+	$('#password').attr('disabled', 'disabled');
+	
+	activeUser = null;
 }
 
 // Attempt to authenticate the selected user with lightdm.
@@ -101,7 +132,12 @@ function finishAuthentication() {
 	} else {
 		// Authentication failed. Reset the password form and display a message.
 		authenticating = false;
-		selectUser(activeUser);
+
+		// Just reselecting would be treated as an unselect, so we clear activeUser
+		// first.
+		var retryUser = activeUser;
+		unselect();
+		selectUser(retryUser);
 
 		// Fade out the current message, replace it with the new one, then eventually fade out that.
 		$('#authentication-message').removeClass('active');
