@@ -12,7 +12,7 @@ Installation
 
 1. Clone this repository into /usr/share/lightdm-webkit/themes/bevel
 2. Set the theme in /etc/lightdm/lightdm-webkit-greeter.conf
-3. Set your default session in /etc/lightdm/lightdm.conf, as currently this
-   theme does not have any kind of a session chooser.
+3. ~~Set your default session in /etc/lightdm/lightdm.conf, as currently this
+   theme does not have any kind of a session chooser.~~ I fixed this!
 
 Obviously you'll need lightdm and lightdm-webkit-greeter.
