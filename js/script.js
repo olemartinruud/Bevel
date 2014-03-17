@@ -13,7 +13,9 @@ var PLACEHOLDER_COLOURS = [
 // Globals
 var authenticating = false;
 var activeUser = null;
+var activeSession = null;
 var availableUsers = [];
+var availableSessions = [];
 
 /**
  * Gets the list of available users from lightdm and fills out the #user-list
@@ -27,6 +29,7 @@ function generateUserList() {
         var userListEntry = $('<div />', {
             class: 'user'
         });
+
 
         userListEntry.data('user', user);
 
@@ -70,8 +73,9 @@ function chooseInitialSelection() {
     if (availableUsers.length == 1) {
         selectUser(availableUsers[0]);
     } else {
-        // TODO: Do something sensible for multiple users. This might just be
-        // nothing.
+      // If no user is selected then there won't be a session selected either.
+      // We want to avoid ever having activeSession === null.
+      selectSession(getDefaultSession());
     }
 }
 
@@ -95,6 +99,9 @@ function selectUser(user) {
         unselect();
         return false;
     }
+
+    // Select this user's default session.
+    selectUserSession(user);
 
     // Dim all users except for this one.
     user.parent().children().addClass('hidden').removeClass('active');
@@ -176,7 +183,7 @@ function finishAuthentication() {
         // Wait a moment before actually logging in so we have time to fade out the
         // controls.
         setTimeout(function () {
-            lightdm.login(lightdm.authentication_user, lightdm.default_session);
+            lightdm.login(lightdm.authentication_user, activeSession.data('id'));
         }, 500);
     } else {
         // Authentication failed. Reset the password form and display a message.
@@ -201,8 +208,97 @@ function finishAuthentication() {
     }
 }
 
+function generateSessionList() {
+  var sessionList = $('#session-list');
+  for (var i in lightdm.sessions) {
+    var session = lightdm.sessions[i];
+    var sessionListEntry = $('<div />', {
+      class: 'session'
+    });
+
+    sessionListEntry.data('id', session.key);
+    sessionListEntry.text(session.name);
+
+    sessionListEntry.appendTo(sessionList);
+    availableSessions.push(sessionListEntry);
+  }
+}
+
+function lookupSessionById(id) {
+  if (availableSessions.length === 0) { return false; }
+
+  for (var i in availableSessions) {
+    var session = availableSessions[i];
+    if (session.data('id') == id) {
+      return session;
+    }
+  }
+
+  // Default to the first listed session.
+  return availableSessions[0];
+}
+
+function getDefaultSession() {
+  if (availableSessions.length === 0) { return false; }
+  var lightdmDefault = lightdm.default_session;
+
+  if (lightdmDefault === null || lightdmDefault === "" ||
+      lightdmDefault == "default") {
+    return availableSessions[0];
+  } else {
+    return lookupSessionById(lightdmDefault);
+  }
+}
+
+function selectUserSession(user) {
+  var preferredSession = user.data('user').session;
+
+  if (preferredSession == "default") {
+    selectSession(getDefaultSession());
+  } else {
+    selectSession(preferredSession);
+  }
+}
+
+function selectSession(id) {
+  if (authenticating) { return false; }
+  if (availableSessions.length === 0) { return false; }
+  var session = lookupSessionById(id);
+
+  // Highlight this session, unhighlight all others.
+  session.siblings().removeClass('active');
+  session.addClass('active');
+
+  // Set as the selected session.
+  activeSession = session;
+
+  // To centre the active session we need to know the total length to shift the
+  // session list to the left.
+  var shift = 0;
+  var foundActive = false;
+  for (var i=0; i<availableSessions.length; i++) {
+    var iSession = availableSessions[i];
+    if (iSession.data('id') != session.data('id')) {
+      if (foundActive) {
+        shift += iSession.width();
+      } else {
+        shift -= iSession.width();
+      }
+    } else {
+      foundActive = true;
+    }
+  }
+
+  $('#session-list').css({
+    'left': shift
+  });
+}
+
 
 $(document).ready(function () {
+    // Get the sessions available.
+    generateSessionList();
+
     // The userlist and maybe preselect one.
     generateUserList();
     chooseInitialSelection();
@@ -211,8 +307,11 @@ $(document).ready(function () {
     lightdm.cancel_timed_login();
 
     // Register closures for events.
-    $('.user').on('click', function (event) {
+    $('.user').click(function (event) {
         selectUser($(this));
+    });
+    $('.session').click(function (event) {
+        selectSession($(this).data('id'));
     });
     $('#password').on('keyup', function (e) {
         if (e.keyCode != 13) {
