@@ -14,8 +14,9 @@ input[type="text"], input[type="password"] {
 html {
   height: 100%;
   background-color: hsl(0, 0%, 13%);
-	/*background-image: url(/usr/share/backgrounds/login.jpg);*/
+	background-image: url(/usr/share/backgrounds/login.jpg);
 	background-size: 100% auto;
+	overflow: hidden;
 }
 
 body {
@@ -239,15 +240,32 @@ input::-webkit-input-placeholder {
   opacity: 1;
 }
 
-#session-list-container {
+#session-list-hider {
   z-index: 10;
-	text-align: center;
+
 	position: absolute;
 	left: 0;
 	right: 0;
-	bottom: 10px;
+	bottom: 0;
+	top: 90%;
 
-	-webkit-mask-image: -webkit-linear-gradient(left, rgba(30,87,153,0) 30%,rgba(255,255,255,1) 50%,rgba(125,185,232,0) 70%);
+  overflow: hidden;
+	text-align: center;
+
+	-webkit-mask-image: -webkit-linear-gradient(left, rgba(30,87,153,0) 0%,rgba(255,255,255,1) 50%,rgba(125,185,232,0) 100%);
+}
+
+#session-list-floater {
+	position:fixed;
+	left: 0;
+	right: 0;
+	bottom:10px;
+
+	overflow:hidden;
+	display:inline;
+
+  -webkit-transition: all 0.3s cubic-bezier(.24,.59,.46,.93);
+  -moz-transition: all 0.3s cubic-bezier(.24,.59,.46,.93);
 }
 
 #session-list {
@@ -255,18 +273,27 @@ input::-webkit-input-placeholder {
 	left: 0;
 	right: 0;
 	bottom: 0;
+
+	white-space: nowrap;
+
+	opacity: 0;
+
   -webkit-transition: all 0.3s cubic-bezier(.24,.59,.46,.93);
   -moz-transition: all 0.3s cubic-bezier(.24,.59,.46,.93);
 }
 
 .session {
-	display: inline;
   cursor: pointer;
+
 	opacity: 0.50;
-  -webkit-transition: all 0.3s cubic-bezier(.24,.59,.46,.93);
-  -moz-transition: all 0.3s cubic-bezier(.24,.59,.46,.93);
+
+	display: inline;
+
 	padding-left: 0.5em;
 	padding-right: 0.5em;
+
+  -webkit-transition: all 0.3s cubic-bezier(.24,.59,.46,.93);
+  -moz-transition: all 0.3s cubic-bezier(.24,.59,.46,.93);
 }
 
 .session.active {

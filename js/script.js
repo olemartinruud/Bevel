@@ -33,12 +33,13 @@ function generateUserList() {
 
         userListEntry.data('user', user);
 
-        // Add an image to represent the user. If no .face image is available, use a
-        // colour from the palette.
+        // Add an image to represent the user. If no .face image is available,
+        // use a colour from the palette.
         var userImage = $('<div />', {
             class: 'bubble'
         });
-        // Set the background colour regardless since the user.image path might be invalid.
+        // Set the background colour regardless since the user.image path might
+        // be invalid.
         userImage.css({
             backgroundColor: PLACEHOLDER_COLOURS[i % PLACEHOLDER_COLOURS.length]
         });
@@ -49,8 +50,8 @@ function generateUserList() {
         }
         userImage.appendTo(userListEntry);
 
-        // Add the user's full name if it's specified, otherwise fallback to using
-        // just their username.
+        // Add the user's full name if it's specified, otherwise fallback to
+        // using just their username.
         var username = $('<div />', {
             class: 'user-name'
         });
@@ -120,6 +121,11 @@ function selectUser(user) {
     $('#password').removeAttr('disabled');
     $('#password-container').removeClass('hidden').find('input').val('').focus();
 
+    // Show the session chooser.
+    $('#session-list').css({
+      'opacity': 1,
+    });
+
     activeUser = user;
     var userData = user.data('user');
     lightdm.start_authentication(userData.name);
@@ -144,6 +150,11 @@ function unselect() {
     // Hide the password entry. Also disable it so it loses focus.
     $('#password-container').addClass('hidden');
     $('#password').attr('disabled', 'disabled');
+
+    // Hide the session chooser.
+    $('#session-list').css({
+      'opacity': 0,
+    });
 
     activeUser = null;
 }
@@ -195,7 +206,8 @@ function finishAuthentication() {
         unselect();
         selectUser(retryUser);
 
-        // Fade out the current message, replace it with the new one, then eventually fade out that.
+        // Fade out the current message, replace it with the new one, then
+        // eventually fade out that.
         $('#authentication-message').removeClass('active');
 
         setTimeout(function () {
@@ -208,6 +220,10 @@ function finishAuthentication() {
     }
 }
 
+/**
+ * Fills out the #session-list div and availableSession array with the user
+ * sessions available.
+ */
 function generateSessionList() {
   var sessionList = $('#session-list');
   for (var i in lightdm.sessions) {
@@ -224,6 +240,10 @@ function generateSessionList() {
   }
 }
 
+/**
+ * Returns the element associated with the given session id. Defaults to the
+ * first session in the list if none matching are found.
+ */
 function lookupSessionById(id) {
   if (availableSessions.length === 0) { return false; }
 
@@ -238,6 +258,10 @@ function lookupSessionById(id) {
   return availableSessions[0];
 }
 
+/**
+ * Returns the default lightdm session, or the first session available if this
+ * value is unset or is set incorrectly.
+ */
 function getDefaultSession() {
   if (availableSessions.length === 0) { return false; }
   var lightdmDefault = lightdm.default_session;
@@ -250,6 +274,9 @@ function getDefaultSession() {
   }
 }
 
+/**
+ * Selects the preferred session of the given user.
+ */
 function selectUserSession(user) {
   var preferredSession = user.data('user').session;
 
@@ -260,6 +287,10 @@ function selectUserSession(user) {
   }
 }
 
+/**
+ * Sets the given session to be the activeSession and moves it to the centre of
+ * the screen.
+ */
 function selectSession(id) {
   if (authenticating) { return false; }
   if (availableSessions.length === 0) { return false; }
@@ -289,7 +320,7 @@ function selectSession(id) {
     }
   }
 
-  $('#session-list').css({
+  $('#session-list-floater').css({
     'left': shift
   });
 }
