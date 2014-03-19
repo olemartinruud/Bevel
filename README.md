@@ -16,3 +16,13 @@ Installation
    theme does not have any kind of a session chooser.~~ I fixed this!
 
 Obviously you'll need lightdm and lightdm-webkit-greeter.
+
+Screenshots
+-----------
+
+![Overview with multiple users](https://github.com/jqln-0/Bevel/raw/screenshots/images/overview.png)
+
+![Logging in](https://github.com/jqln-0/Bevel/raw/screenshots/images/login.png)
+
+![Choosing a session with multiple users](https://github.com/jqln-0/Bevel/raw/screenshots/images/session.png)
+
