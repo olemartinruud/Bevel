@@ -24,5 +24,3 @@ Screenshots
 
 ![Logging in](https://github.com/jqln-0/Bevel/raw/screenshots/images/login.png)
 
-![Choosing a session with multiple users](https://github.com/jqln-0/Bevel/raw/screenshots/images/session.png)
-
