@@ -14,9 +14,9 @@ input[type="text"], input[type="password"] {
 html {
   height: 100%;
   background-color: hsl(0, 0%, 13%);
-	background-image: url(/usr/share/backgrounds/login.jpg);
-	background-size: 100% auto;
-	overflow: hidden;
+  background-image: url(/usr/share/backgrounds/login.jpg);
+  background-size: 100% auto;
+  overflow: hidden;
 }
 
 body {
@@ -243,26 +243,26 @@ input::-webkit-input-placeholder {
 #session-list-hider {
   z-index: 10;
 
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	top: 90%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 90%;
 
   overflow: hidden;
-	text-align: center;
+  text-align: center;
 
-	-webkit-mask-image: -webkit-linear-gradient(left, rgba(30,87,153,0) 0%,rgba(255,255,255,1) 50%,rgba(125,185,232,0) 100%);
+  -webkit-mask-image: -webkit-linear-gradient(left, rgba(30,87,153,0) 0%,rgba(255,255,255,1) 50%,rgba(125,185,232,0) 100%);
 }
 
 #session-list-floater {
-	position:fixed;
-	left: 0;
-	right: 0;
-	bottom:10px;
+  position:fixed;
+  left: 0;
+  right: 0;
+  bottom:10px;
 
-	overflow:hidden;
-	display:inline;
+  overflow:hidden;
+  display:inline;
 
   -webkit-transition: all 0.3s cubic-bezier(.24,.59,.46,.93);
   -moz-transition: all 0.3s cubic-bezier(.24,.59,.46,.93);
@@ -270,13 +270,13 @@ input::-webkit-input-placeholder {
 
 #session-list {
   position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
-	white-space: nowrap;
+  white-space: nowrap;
 
-	opacity: 0;
+  opacity: 0;
 
   -webkit-transition: all 0.3s cubic-bezier(.24,.59,.46,.93);
   -moz-transition: all 0.3s cubic-bezier(.24,.59,.46,.93);
@@ -285,17 +285,17 @@ input::-webkit-input-placeholder {
 .session {
   cursor: pointer;
 
-	opacity: 0.50;
+  opacity: 0.50;
 
-	display: inline;
+  display: inline;
 
-	padding-left: 0.5em;
-	padding-right: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 
   -webkit-transition: all 0.3s cubic-bezier(.24,.59,.46,.93);
   -moz-transition: all 0.3s cubic-bezier(.24,.59,.46,.93);
 }
 
 .session.active {
-	opacity: 1;
+  opacity: 1;
 }
