@@ -43,7 +43,7 @@ function generateUserList() {
         userImage.css({
             backgroundColor: PLACEHOLDER_COLOURS[i % PLACEHOLDER_COLOURS.length]
         });
-        if (user.image.length > 0) {
+        if (user.image) {
             userImage.css({
                 'background-image': 'url(' + user.image + ')'
             });
