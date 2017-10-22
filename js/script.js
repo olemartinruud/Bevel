@@ -325,6 +325,13 @@ function selectSession(id) {
   });
 }
 
+/**
+ * Selects a random background from a given folder
+ */
+function selectRandomBackground(folder_path) {
+    var image_path_list = theme_utils.dirlist(folder_path);
+    return image_path_list[Math.floor(Math.random()*image_path_list.length)];
+}
 
 $(document).ready(function () {
     // Get the sessions available.
@@ -353,6 +360,8 @@ $(document).ready(function () {
     window.authentication_complete = function () {
         finishAuthentication();
     };
+
+    $('html').css("background-image", "url(" + selectRandomBackgroundImage(window.greeter_config.background_images) + ")");
 
     // Ready to go! Fade in the login screen.
     $('body').animate({
