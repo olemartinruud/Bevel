@@ -3,9 +3,7 @@ Bevel
 
 A super awesome LightDM Webkit greeter theme.
 
-This is a fork of Blender3D's excellent theme. At the moment my changes amount
-to a few simple bugfixes and a restructuring of the javascript which provides
-the theme's functionality. I have vague plans to improve the theme further.
+This is a fork of Blender3D's excellent theme, with additional bugfixes from bragagia.
 
 Installation
 ------------
