@@ -12,7 +12,9 @@
 </head>
 
 <body>
-    <div id="wrapper">
+    <div id="full-overlay" class="overlay"></div>
+
+    <div id="login-wrapper">
         <!--<h1>Login to <span id="hostname">hostname</span></h1>-->
         <div id="user-list-wrapper">
             <div id="user-list" data-shift="0"></div>
@@ -30,14 +32,15 @@
                 <div id="session-list" />
             </div>
         </div>
-
-        <div id="controls">
-            <div class="system-button">Shutdown</div>
-            <div class="system-button">Restart</div>
-            <div class="system-button">Hibernate</div>
-            <div class="system-button">Suspend</div>
-        </div>
     </div>
+
+    <div id="controls">
+        <div class="system-button">Shutdown</div>
+        <div class="system-button">Restart</div>
+        <div class="system-button">Hibernate</div>
+        <div class="system-button">Suspend</div>
+    </div>
+
 </body>
 
 </html>

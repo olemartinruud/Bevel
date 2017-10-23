@@ -334,6 +334,7 @@ function selectRandomBackgroundImage(folder_path) {
     return image_path_list[random_index];
 }
 
+
 $(document).ready(function () {
     // Get the sessions available.
     generateSessionList();
@@ -365,19 +366,24 @@ $(document).ready(function () {
     // Selects a random background image
     $('html').css("background-image", "url(" + selectRandomBackgroundImage(greeter_config.get_str("branding", "background_images")) + ")"); //TODO Change to greeter_config.branding.background_images when problem is fixed
 
-    var wrapper = $('#wrapper');
-    // Ready to go!
+    var wrapper = $('#login-wrapper');
+    var overlay = $('#full-overlay');
+
+    // Ready to go! Activate on keypress
     $('body').on('keypress', function (e) {
         if (!wrapper.hasClass('visible')){
             wrapper.addClass('visible');
+            overlay.addClass('visible');
             e.preventDefault();
         } else if(e.keyCode == 27 && wrapper.hasClass('visible')){
             wrapper.removeClass('visible');
+            overlay.removeClass('visible');
         }
     });
     $('body').click(function (e) {
         if(!wrapper.hasClass('visible')){
             wrapper.addClass('visible');
+            overlay.addClass('visible');
             e.preventDefault();
         }
     });
