@@ -364,10 +364,7 @@ $(document).ready(function () {
         selectSession($(this).data('id'));
     });
     $('#password').on('keyup', function (e) {
-        if (e.keyCode != 13) {
-            return;
-        }
-        doAuthentication($(this).val());
+        if (e.keyCode == 13) doAuthentication($(this).val());
     });
     window.authentication_complete = function () {
         finishAuthentication();
@@ -396,7 +393,6 @@ $(document).ready(function () {
         if(!wrapper.hasClass('visible')){
             wrapper.addClass('visible');
             overlay.addClass('visible');
-            e.preventDefault();
         }
     });
 });
