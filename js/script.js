@@ -328,9 +328,10 @@ function selectSession(id) {
 /**
  * Selects a random background from a given folder
  */
-function selectRandomBackground(folder_path) {
-    var image_path_list = theme_utils.dirlist(folder_path);
-    return image_path_list[Math.floor(Math.random()*image_path_list.length)];
+function selectRandomBackgroundImage(folder_path) {
+    var image_path_list = window.theme_utils.dirlist(folder_path);
+    var random_index = Math.floor(Math.random()*image_path_list.length);
+    return image_path_list[random_index];
 }
 
 $(document).ready(function () {
@@ -361,10 +362,23 @@ $(document).ready(function () {
         finishAuthentication();
     };
 
-    $('html').css("background-image", "url(" + selectRandomBackgroundImage(window.greeter_config.background_images) + ")");
+    // Selects a random background image
+    $('html').css("background-image", "url(" + selectRandomBackgroundImage(greeter_config.get_str("branding", "background_images")) + ")"); //TODO Change to greeter_config.branding.background_images when problem is fixed
 
-    // Ready to go! Fade in the login screen.
-    $('body').animate({
-        'opacity': '1'
-    }, 400);
+    var wrapper = $('#wrapper');
+    // Ready to go!
+    $('body').on('keypress', function (e) {
+        if (!wrapper.hasClass('visible')){
+            wrapper.addClass('visible');
+            e.preventDefault();
+        } else if(e.keyCode == 27 && wrapper.hasClass('visible')){
+            wrapper.removeClass('visible');
+        }
+    });
+    $('body').click(function (e) {
+        if(!wrapper.hasClass('visible')){
+            wrapper.addClass('visible');
+            e.preventDefault();
+        }
+    });
 });
