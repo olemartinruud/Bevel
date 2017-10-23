@@ -9,6 +9,7 @@ var PLACEHOLDER_COLOURS = [
     '#79BD8F',
     '#00A388',
 ];
+var ICON_FOLDER = "/usr/share/lightdm-webkit/themes/Bevel/resources/icons/hex/"
 
 // Globals
 var authenticating = false;
@@ -64,6 +65,17 @@ function generateUserList() {
 
         availableUsers.push(userListEntry);
         userListEntry.appendTo(userList);
+    }
+}
+
+/**
+ *
+ */
+function generateControlImageList() {
+    var control_els = $('.system-button');
+    for (var i = 0; i < control_els.length; i++){
+        var control_el = control_els[i];
+        $(control_el).attr('src', ICON_FOLDER + $(control_el).attr('data-action') + '.png');
     }
 }
 
@@ -374,6 +386,7 @@ $(document).ready(function () {
     $('html').css("background-image", "url(" + selectRandomBackgroundImage(greeter_config.get_str("branding", "background_images")) + ")"); //TODO Change to greeter_config.branding.background_images when problem is fixed
 
     initializeClock();
+    generateControlImageList();
 
     var wrapper = $('#login-wrapper');
     var overlay = $('#full-overlay');

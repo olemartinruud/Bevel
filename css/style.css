@@ -216,34 +216,41 @@ input::-webkit-input-placeholder {
 }
 
 #controls {
-    display: block;
+    display: flex;
     position: absolute;
-    top: 5em;
-    left: 0;
+    top: 6em;
+    padding: 1.3em;
     right: 0;
-    overflow: hidden;
-    text-align: right;
+    left: 0;
+    flex-direction: row-reverse;
+    align-items: flex-end;
 }
 
 .system-button {
+    display: block;
     position: relative;
-    bottom: -10px;
-    opacity: 0.65;
-    height: 35px;
-    display: inline-block;
-    color: white;
+    top: 0;
+    width: 60px;
+    object-fit: contain;
     cursor: pointer;
-    padding: 10px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    margin-right: 10px;
-    -webkit-transition: all 0.3s cubic-bezier(.24, .59, .46, .93);
-    -moz-transition: all 0.3s cubic-bezier(.24, .59, .46, .93);
+    -webkit-transition: all 0.1s ease-in-out;
+    transform-origin: center;
 }
 
-.system-button:hover {
-    bottom: 0;
-    opacity: 1;
+.system-button:nth-of-type(even) {
+    transform: translate(28px, 80%);
+}
+
+.system-button:nth-child(n+3) {
+    right: -56px;
+}
+
+.system-button:nth-of-type(odd):hover {
+    transform: scale(1.1, 1.1);
+}
+
+.system-button:nth-of-type(even):hover {
+    transform: translate(28px, 80%) scale(1.1, 1.1);
 }
 
 #session-list-hider {
