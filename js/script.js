@@ -334,6 +334,16 @@ function selectRandomBackgroundImage(folder_path) {
     return image_path_list[random_index];
 }
 
+/**
+ *  Updates the clock
+ */
+function initializeClock() {
+    var clock = $('#big-clock');
+    clock.html( moment().format('HH:mm:ss') );
+    setInterval( () => {
+        clock.html( moment().format('HH:mm:ss') );
+    }, 1000 );
+}
 
 $(document).ready(function () {
     // Get the sessions available.
@@ -365,6 +375,8 @@ $(document).ready(function () {
 
     // Selects a random background image
     $('html').css("background-image", "url(" + selectRandomBackgroundImage(greeter_config.get_str("branding", "background_images")) + ")"); //TODO Change to greeter_config.branding.background_images when problem is fixed
+
+    initializeClock();
 
     var wrapper = $('#login-wrapper');
     var overlay = $('#full-overlay');

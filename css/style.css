@@ -21,7 +21,8 @@ html {
 body {
     color: hsl(0, 0%, 100%);
     display: block;
-    font: 16px/1.625em 'sans';
+    font-size: 16px/1.625em;
+    font-family: 'Source Code Pro', 'Caviar Dreams', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -95,7 +96,6 @@ label {
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
     font-size: 50px;
-    font-family: 'sans';
     color: white;
     font-weight: 600;
 }
@@ -125,7 +125,6 @@ input {
 input::-webkit-input-placeholder {
     /*position: relative;
   top: -2px;*/
-    font-family: 'sans';
 }
 
 #background {
@@ -195,7 +194,6 @@ input::-webkit-input-placeholder {
 .user-name {
     font-size: 20px;
     font-weight: 600;
-    font-family: 'sans';
     text-shadow: 0px 2px 7px #000000;
     color: white;
 }
@@ -297,4 +295,14 @@ input::-webkit-input-placeholder {
 
 .session.active {
     opacity: 1;
+}
+
+#big-clock {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 0 .2em 0 0;
+    text-align: right;
+    font-size: 5em;
+    z-index: -5;
 }
