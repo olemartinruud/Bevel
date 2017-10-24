@@ -124,8 +124,8 @@ function selectUser (user) {
   });
 
   // Show the password form, clear and focus it.
-  $('#password').removeAttr('disabled');
-  $('#password-container').removeClass('hidden').find('input').val('').focus();
+  $('#password-input').removeAttr('disabled');
+  $('#authentication-container').removeClass('hidden').find('input').val('').focus();
 
   // Show the session chooser.
   $('#session-list').css({
@@ -154,8 +154,8 @@ function unselect () {
   });
 
   // Hide the password entry. Also disable it so it loses focus.
-  $('#password-container').addClass('hidden');
-  $('#password').attr('disabled', 'disabled');
+  $('#authentication-container').addClass('hidden');
+  $('#password-input').attr('disabled', 'disabled');
 
   // Hide the session chooser.
   $('#session-list').css({
@@ -175,14 +175,18 @@ function doAuthentication (password) {
     return false;
   }
 
-  authenticating = true;
-  // var userData = activeUser.data('user');
-  // lightdm.start_authentication(userData.name);
-  lightdm.provide_secret(password);
-
+  $('#authentication-container').removeClass('error');
+  $('#authentication-container').addClass('authenticating');
   // Display the message for this event and disable the form.
   $('#authentication-message').removeClass('error').text(AUTHENTICATION_BEGIN_MESSAGE).addClass('active');
-  $('#password').attr('disabled', 'disabled');
+  $('#password-input').attr('disabled', 'disabled');
+
+  setTimeout(function () {
+    authenticating = true;
+    // var userData = activeUser.data('user');
+    // lightdm.start_authentication(userData.name);
+    lightdm.provide_secret(password);
+  }, 900);
 }
 
 /**
@@ -194,8 +198,7 @@ function finishAuthentication () {
   if (lightdm.is_authenticated) {
     $('body').animate({
       'opacity': '0'
-    }, 400);
-
+    }, 600);
     // Wait a moment before actually logging in so we have time to fade out the
     // controls.
     setTimeout(function () {
@@ -204,6 +207,9 @@ function finishAuthentication () {
   } else {
     // Authentication failed. Reset the password form and display a message.
     authenticating = false;
+
+    $('#authentication-container').addClass('error');
+    $('#authentication-container').removeClass('authenticating');
 
     // Just reselecting would be treated as an unselect, so we clear activeUser
     // first.
@@ -220,7 +226,7 @@ function finishAuthentication () {
       setTimeout(function () {
         $('#authentication-message').removeClass('active error');
       }, 3000); // TODO: This might fade out the message incorrectly if it changed.
-    }, 300);
+    }, 900);
   }
 }
 
@@ -364,7 +370,7 @@ function setLoginWrapperDisplayEvent () {
   var overlay = $('#full-overlay');
 
   // Ready to go! Activate on keypress
-  $('body').on('keypress', function (e) {
+  $('html').on('keypress', function (e) {
     if (wrapper.hasClass('hidden')) {
       wrapper.removeClass('hidden');
       overlay.removeClass('hidden');
@@ -380,6 +386,8 @@ function setLoginWrapperDisplayEvent () {
       overlay.removeClass('hidden');
     }
   });
+
+  $('#authentication-container').removeClass('hidden').find('input').val('').focus();
 }
 
 $(document).ready(function () {
@@ -400,7 +408,7 @@ $(document).ready(function () {
   $('.session').click(function (event) {
     selectSession($(this).data('id'));
   });
-  $('#password').on('keyup', function (e) {
+  $('#password-input').on('keyup', function (e) {
     if (e.keyCode === 13) { doAuthentication($(this).val()); }
   });
   window.authentication_complete = function () {
