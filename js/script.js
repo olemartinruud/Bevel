@@ -3,7 +3,7 @@ var AUTHENTICATION_BEGIN_MESSAGE = 'Logging in...';
 // var AUTHENTICATION_SUCCUESS_MESSAGE = ''; // Should never actually show.
 var AUTHENTICATION_FAILURE_MESSAGE = 'Incorrect password';
 var PLACEHOLDER_COLOURS = ['#FF6138', '#FFFF9D', '#BEEB9F', '#79BD8F', '#00A388'];
-var THEME_FOLDER = '/usr/share/lightdm-webkit/themes/Bevel';
+var THEME_FOLDER = '/usr/share/lightdm-webkit/themes/bevelhex';
 var ICON_FOLDER = '/resources/icons/hex/';
 
 // Globals
