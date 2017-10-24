@@ -1,22 +1,30 @@
 <html>
 
 <head>
+    <link href="css/style.css" rel="stylesheet" />
+
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.mousewheel.js"></script>
     <script src="js/quantize.js"></script>
     <script src="js/color-thief.js"></script>
     <script src="js/dummy.js"></script>
     <script src="js/script.js"></script>
-
-    <link href="css/style.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div id="full-overlay" class="overlay"></div>
+    <div id="full-overlay" class="overlay hidden"></div>
+    <div id="gradient-overlay" class="overlay hidden"></div>
 
     <div id="big-clock"></div>
 
-    <div id="login-wrapper">
+    <div id="controls">
+        <img class="system-button" src="" data-action="suspend" \>
+        <img class="system-button" src="" data-action="hibernate" \>
+        <img class="system-button" src="" data-action="restart" \>
+        <img class="system-button" src="" data-action="shutdown" \>
+    </div>
+
+    <div id="login-wrapper" class="hidden">
         <!--<h1>Login to <span id="hostname">hostname</span></h1>-->
         <div id="user-list-wrapper">
             <div id="user-list" data-shift="0"></div>
@@ -34,13 +42,6 @@
                 <div id="session-list"></div>
             </div>
         </div>
-    </div>
-
-    <div id="controls">
-        <img class="system-button" src="" data-action="suspend" \>
-        <img class="system-button" src="" data-action="hibernate" \>
-        <img class="system-button" src="" data-action="restart" \>
-        <img class="system-button" src="" data-action="shutdown" \>
     </div>
 
 </body>

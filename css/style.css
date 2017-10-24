@@ -37,12 +37,16 @@ body {
     background-color: rgba(0, 0, 0, 0.6);
     z-index: -1;
 
-    opacity: 0;
+    opacity: 1;
     transition: all 0.5s ease-in-out;
 }
 
-.overlay.visible {
-    opacity: 1;
+.overlay.hidden {
+    opacity: 0;
+}
+
+#gradient-overlay {
+    background: linear-gradient(#000000, #ffffff);
 }
 
 #login-wrapper {
@@ -53,14 +57,14 @@ body {
     top: 0;
     left: 0;
 
-    visibility: hidden;
-    opacity: 0;
+    visibility: visible;
+    opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
 
-#login-wrapper.visible {
-    visibility: visible;
-    opacity: 1;
+#login-wrapper.hidden {
+    visibility: hidden;
+    opacity: 0;
 }
 
 #user-list-wrapper {

@@ -1,6 +1,9 @@
 Bevel
 =====
 
+[![js-standard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg)](http://standardjs.com)
+
+
 A super awesome LightDM Webkit greeter theme.
 
 This is a fork of Blender3D's excellent theme, with additional bugfixes from bragagia.
@@ -21,4 +24,3 @@ Screenshots
 ![Overview with multiple users](https://github.com/jqln-0/Bevel/raw/screenshots/images/overview.png)
 
 ![Logging in](https://github.com/jqln-0/Bevel/raw/screenshots/images/login.png)
-
