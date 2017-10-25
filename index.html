@@ -7,41 +7,41 @@
   <script src="js/jquery.mousewheel.js"></script>
   <script src="js/quantize.js"></script>
   <script src="js/color-thief.js"></script>
-  <script src="js/dummy.js"></script>
+  <script src="js/dummy.js"></script>-
   <script src="js/script.js"></script>
 </head>
 
 <body>
-  <div id="full-overlay" class="overlay hidden"></div>
-  <div id="gradient-overlay" class="overlay"></div>
+  <div id="full-background" class="fill-parent background"></div>
+  <div id="full-overlay" class="fill-parent overlay hidden"></div>
+  <div id="gradient-overlay" class="fill-parent overlay"></div>
 
-  <div id="big-clock"></div>
+  <div id="UI" class="fill-parent">
+    <div id="clock-and-controls-wrapper">
+      <div id="big-clock"></div>
 
-  <div id="controls">
-    <img class="system-button" src="" data-action="suspend" \>
-    <img class="system-button" src="" data-action="hibernate" \>
-    <img class="system-button" src="" data-action="restart" \>
-    <img class="system-button" src="" data-action="shutdown" \>
-  </div>
-
-  <div id="login-wrapper" class="hidden">
-    <!--<h1>Login to <span id="hostname">hostname</span></h1>-->
-    <div id="user-list-wrapper">
-      <div id="user-list" data-shift="0"></div>
-    </div>
-
-    <div id="authentication-container" class="hidden">
-      <div id="password-bits">000110110110110101111010101</div>
-      <div id="password-container">
-        <input id="password-input" type="password" autofocus />
+      <div id="system-controls">
+        <img class="system-button" src="" data-action="suspend" \>
+        <img class="system-button" src="" data-action="hibernate" \>
+        <img class="system-button" src="" data-action="restart" \>
+        <img class="system-button" src="" data-action="shutdown" \>
       </div>
-      <div id="authentication-message">Invalid password, please try again</div>
     </div>
 
-    <div id="session-list-hider">
-      &nbsp;
-      <div id="session-list-floater">
-        &nbsp;
+    <div id="login-section-wrapper" class="hidden">
+      <div id="user-list-wrapper">
+        <div id="user-list" data-shift="0"></div>
+      </div>
+
+      <div id="authentication-wrapper" class="hidden">
+        <div id="password-container">
+          <input id="password-input" type="password" autofocus />
+        </div>
+        <div id="password-bits">000110110110110101111010101</div>
+        <div id="authentication-message">Invalid password, please try again</div>
+      </div>
+
+      <div id="session-list-wrapper" class="mask-edges hidden">
         <div id="session-list"></div>
       </div>
     </div>

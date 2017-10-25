@@ -3,8 +3,9 @@ var AUTHENTICATION_BEGIN_MESSAGE = 'Logging in...';
 // var AUTHENTICATION_SUCCUESS_MESSAGE = ''; // Should never actually show.
 var AUTHENTICATION_FAILURE_MESSAGE = 'Incorrect password';
 var PLACEHOLDER_COLOURS = ['#FF6138', '#FFFF9D', '#BEEB9F', '#79BD8F', '#00A388'];
-var THEME_FOLDER = '/usr/share/lightdm-webkit/themes/bevelhex';
-var ICON_FOLDER = '/resources/icons/hex/';
+var THEME_FOLDER = '/usr/share/lightdm-webkit/themes/bevelhex/';
+var ICON_FOLDER = THEME_FOLDER + 'resources/icons/hex/';
+var DUMMY_FOLDER = THEME_FOLDER + 'resources/dummy/';
 
 // Globals
 var authenticating = false;
@@ -31,7 +32,7 @@ function generateUserList () {
     // Add an image to represent the user. If no .face image is available,
     // use a colour from the palette.
     var userImage = $('<div />', {
-      class: 'bubble'
+      class: 'user-image'
     });
     // Set the background colour regardless since the user.image path might
     // be invalid.
@@ -63,14 +64,33 @@ function generateUserList () {
 }
 
 /**
- * Generates a list of images in #controls which contain the icons for the actions
+ * Generates a list of images in #system-controls which contain the icons for the actions,
+ * from an arraylist of html-elements in JQuery-form
  */
-function generateControlImageList () {
-  var controlEls = $('.system-button');
-  for (var i = 0; i < controlEls.length; i++) {
-    var controlEl = controlEls[i];
-    $(controlEl).attr('src', THEME_FOLDER + ICON_FOLDER + $(controlEl).attr('data-action') + '.png');
-  }
+function generateControlImageList (controlElements) {
+  controlElements.each(function () {
+    $(this).attr('src', ICON_FOLDER + $(this).attr('data-action') + '.png');
+  });
+}
+
+/**
+ * Generates the control buttons from an arraylist of html-elements in JQuery-form
+ */
+function generateControls (controlElements) {
+  var possibleActions = {
+    'shutdown': lightdm.can_shutdown,
+    'restart': lightdm.can_restart,
+    'suspend': lightdm.can_suspend,
+    'hibernate': lightdm.can_hibernate
+  };
+  controlElements.each(function () {
+    if (possibleActions.hasOwnProperty($(this).attr('data-action')) && possibleActions[$(this).attr('data-action')]) {
+      $(this).click(function (e) {
+        lightdm[$(this).attr('data-action')]();
+      });
+    }
+  });
+  generateControlImageList(controlElements);
 }
 
 /**
@@ -111,7 +131,7 @@ function selectUser (user) {
   selectUserSession(user);
 
   // Dim all users except for this one.
-  user.parent().children().addClass('hidden').removeClass('active');
+  user.siblings().addClass('hidden').removeClass('active');
   user.addClass('active').removeClass('hidden');
 
   // Move the selected user's image to the centre.
@@ -125,12 +145,8 @@ function selectUser (user) {
 
   // Show the password form, clear and focus it.
   $('#password-input').removeAttr('disabled');
-  $('#authentication-container').removeClass('hidden').find('input').val('').focus();
-
-  // Show the session chooser.
-  $('#session-list').css({
-    'opacity': 1
-  });
+  $('#authentication-wrapper').removeClass('hidden').find('input').val('').focus();
+  $('#session-list-wrapper').removeClass('hidden');
 
   activeUser = user;
   var userData = user.data('user');
@@ -147,20 +163,16 @@ function unselect () {
   }
 
   // Reset the user divs.
-  activeUser.parent().children().removeClass('hidden').removeClass('active');
+  activeUser.siblings().removeClass('hidden').removeClass('active');
   $('#user-list').css({
     left: 0,
     right: 0
   });
 
   // Hide the password entry. Also disable it so it loses focus.
-  $('#authentication-container').addClass('hidden');
+  $('#authentication-wrapper').addClass('hidden');
+  $('#session-list-wrapper').addClass('hidden');
   $('#password-input').attr('disabled', 'disabled');
-
-  // Hide the session chooser.
-  $('#session-list').css({
-    'opacity': 0
-  });
 
   activeUser = null;
 }
@@ -175,8 +187,9 @@ function doAuthentication (password) {
     return false;
   }
 
-  $('#authentication-container').removeClass('error');
-  $('#authentication-container').addClass('authenticating');
+  $('#authentication-wrapper').removeClass('error');
+  $('#authentication-wrapper').addClass('authenticating');
+  $('#password-bits').removeClass('hidden');
   // Display the message for this event and disable the form.
   $('#authentication-message').removeClass('error').text(AUTHENTICATION_BEGIN_MESSAGE).addClass('active');
   $('#password-input').attr('disabled', 'disabled');
@@ -196,7 +209,7 @@ function doAuthentication (password) {
  */
 function finishAuthentication () {
   if (lightdm.is_authenticated) {
-    $('body').animate({
+    $('#UI').animate({
       'opacity': '0'
     }, 600);
     // Wait a moment before actually logging in so we have time to fade out the
@@ -208,8 +221,8 @@ function finishAuthentication () {
     // Authentication failed. Reset the password form and display a message.
     authenticating = false;
 
-    $('#authentication-container').addClass('error');
-    $('#authentication-container').removeClass('authenticating');
+    $('#authentication-wrapper').addClass('error');
+    $('#authentication-wrapper').removeClass('authenticating');
 
     // Just reselecting would be treated as an unselect, so we clear activeUser
     // first.
@@ -311,33 +324,27 @@ function selectSession (id) {
   if (availableSessions.length === 0) {
     return false;
   }
-  var session = lookupSessionById(id);
+  var selectedSession = lookupSessionById(id);
 
   // Highlight this session, unhighlight all others.
-  session.siblings().removeClass('active');
-  session.addClass('active');
+  selectedSession.siblings().removeClass('active');
+  selectedSession.addClass('active');
 
   // Set as the selected session.
-  activeSession = session;
+  window.activeSession = selectedSession;
 
   // To centre the active session we need to know the total length to shift the
   // session list to the left.
-  var shift = 0;
-  var foundActive = false;
-  for (var i = 0; i < availableSessions.length; i++) {
-    var iSession = availableSessions[i];
-    if (iSession.data('id') !== session.data('id')) {
-      if (foundActive) {
-        shift += iSession.width();
-      } else {
-        shift -= iSession.width();
-      }
-    } else {
-      foundActive = true;
-    }
+  var sessionListFloaterEl = $('#session-list');
+
+  var shift = (sessionListFloaterEl.outerWidth() - activeSession.outerWidth(true)) / 2;
+
+  for (var session of availableSessions) {
+    if ($(session).data('id') === activeSession.data('id')) break;
+    shift -= $(session).outerWidth(true);
   }
 
-  $('#session-list-floater').css({
+  sessionListFloaterEl.css({
     'left': shift
   });
 }
@@ -346,7 +353,7 @@ function selectSession (id) {
  * Selects a random background from a given folder
  */
 function selectRandomBackgroundImage (folderPath) {
-  var imagePathList = window.theme_utils.dirlist(folderPath);
+  var imagePathList = window.theme_utils ? window.theme_utils.dirlist(folderPath) : [ folderPath + 'background.jpg' ];
   var randomIndex = Math.floor(Math.random() * imagePathList.length);
   return imagePathList[randomIndex];
 }
@@ -356,38 +363,42 @@ function selectRandomBackgroundImage (folderPath) {
  */
 function initializeClock () {
   var clock = $('#big-clock');
-  clock.html(moment().format('HH:mm:ss'));
-  setInterval(() => {
+  if (window.moment) {
     clock.html(moment().format('HH:mm:ss'));
-  }, 1000);
+    setInterval(() => {
+      clock.html(moment().format('HH:mm:ss'));
+    }, 1000);
+  } else {
+    clock.html('12:00:00');
+  }
 }
 
 /**
  *
  */
-function setLoginWrapperDisplayEvent () {
-  var wrapper = $('#login-wrapper');
+function setLoginWrapperDisplayEvents () {
+  var loginWrapper = $('#login-section-wrapper');
   var overlay = $('#full-overlay');
 
   // Ready to go! Activate on keypress
-  $('html').on('keypress', function (e) {
-    if (wrapper.hasClass('hidden')) {
-      wrapper.removeClass('hidden');
+  $(document).on('keyup', function (e) {
+    if (loginWrapper.hasClass('hidden')) {
+      loginWrapper.removeClass('hidden');
       overlay.removeClass('hidden');
-      e.preventDefault();
-    } else if (e.keyCode === 27 && !wrapper.hasClass('hidden')) {
-      wrapper.addClass('hidden');
+    } else if (((e.key && (e.key === 'Escape' || e.key === 'esc')) || e.keyCode === 27) && !loginWrapper.hasClass('hidden')) {
+      loginWrapper.addClass('hidden');
       overlay.addClass('hidden');
     }
   });
-  $('body').click(function (e) {
-    if (wrapper.hasClass('hidden')) {
-      wrapper.removeClass('hidden');
+  $(document).click(function (e) {
+    if (loginWrapper.hasClass('hidden')) {
+      loginWrapper.removeClass('hidden');
       overlay.removeClass('hidden');
+    } else if (!$.data($(e.target).get(0), 'events')) {
+      loginWrapper.addClass('hidden');
+      overlay.addClass('hidden');
     }
   });
-
-  $('#authentication-container').removeClass('hidden').find('input').val('').focus();
 }
 
 $(document).ready(function () {
@@ -398,28 +409,33 @@ $(document).ready(function () {
   generateUserList();
   chooseInitialSelection();
 
+  // Makes the controls ready for use
+  generateControls($('#system-controls').children());
+
+  // Selects a random background image
+  var backgroundImagesPath = window.greeter_config ? greeter_config.get_str('branding', 'background_images') : DUMMY_FOLDER;
+  $('#full-background').css('background-image', 'url(' + selectRandomBackgroundImage(backgroundImagesPath) + ')'); // TODO Change to greeter_config.branding.background_images when problem is fixed
+
   // Timed login is currently not supported, so cancel it.
   lightdm.cancel_timed_login();
 
   // Register closures for events.
-  $('.user').click(function (event) {
-    selectUser($(this));
+  $('.user-image').click(function (e) {
+    selectUser($(this).parent());
   });
-  $('.session').click(function (event) {
+  $('.session').click(function (e) {
     selectSession($(this).data('id'));
   });
   $('#password-input').on('keyup', function (e) {
-    if (e.keyCode === 13) { doAuthentication($(this).val()); }
+    if (((e.key && (e.key === 'Enter' || e.key === 'ent')) || e.keyCode === 13)) {
+      doAuthentication($(this).val());
+    }
   });
   window.authentication_complete = function () {
     finishAuthentication();
   };
 
-  // Selects a random background image
-  $('html').css('background-image', 'url(' + selectRandomBackgroundImage(greeter_config.get_str('branding', 'background_images')) + ')'); // TODO Change to greeter_config.branding.background_images when problem is fixed
-
   initializeClock();
-  generateControlImageList();
 
-  setLoginWrapperDisplayEvent();
+  setLoginWrapperDisplayEvents();
 });

@@ -1,4 +1,5 @@
 * {
+  user-select: none;
   -webkit-user-select: none;
   -webkit-user-drag: none;
 }
@@ -13,8 +14,6 @@ input[type="text"], input[type="password"] {
 
 html {
   height: 100%;
-  background-image: url("/usr/share/backgrounds/login.jpg");
-  background-size: cover;
   overflow: hidden;
 }
 
@@ -25,69 +24,6 @@ body {
   font-family: 'Source Code Pro', 'Caviar Dreams', sans-serif;
   margin: 0;
   padding: 0;
-}
-
-.overlay {
-  position: fixed;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: -1;
-  opacity: 1;
-  transition: all 0.5s ease-in-out;
-}
-
-.overlay.hidden {
-  opacity: 0;
-}
-
-#gradient-overlay {
-  background: linear-gradient(30deg, transparent 70%, rgba(0, 0, 0, .8) 100%);
-}
-
-#login-wrapper {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 1;
-  user-select: auto;
-  pointer-events: auto;
-  transition: opacity 0.5s ease-in-out;
-}
-
-#login-wrapper.hidden {
-  opacity: 0;
-  user-select: none;
-  pointer-events: none;
-}
-
-#user-list-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-}
-
-#authentication-message {
-  opacity: 0;
-  -webkit-transition: all 0.3s cubic-bezier(.24, .59, .46, .93);
-  -moz-transition: all 0.3s cubic-bezier(.24, .59, .46, .93);
-}
-
-#authentication-message.error {
-  color: hsl(359, 100%, 60%);
-}
-
-#authentication-message.active {
-  opacity: 1;
 }
 
 label {
@@ -127,146 +63,59 @@ input::-webkit-input-placeholder {
   top: -2px;*/
 }
 
-#background {
-  z-index: -1;
-  position: absolute;
-}
-
-#user-list, #authentication-container {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 150px;
-  margin-top: -75px;
-  text-align: center;
-  -webkit-transition: all 0.3s cubic-bezier(.24, .59, .46, .93);
-  -moz-transition: all 0.3s cubic-bezier(.24, .59, .46, .93);
-}
-
-#authentication-container {
-  height: 40px;
-  margin-top: 70px;
-}
-
-@keyframes authenticating {
-  0% { opacity: 0; text-shadow: 0 0 3px white; transform: translateX(0); }
-  100% { opacity: 1; text-shadow: 0 0 5px white; transform: translateX(200%); }
-}
-
-#password-bits {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 30px;
-  line-height: 30px;
-  display: block;
-  color: #00e000;
-  text-shadow: 0 0 3px white;
-  opacity: 0;
-  transition: opacity 0.7s ease-in, transform 0.9s ease-in;
-}
-
-#authentication-container.authenticating #password-bits {
-  opacity: 1;
-  transform: translateX(300%);
-}
-
-#password-container {
-  position: relative;
-  margin-top: 30px;
-  display: inline-block;
-  overflow: hidden;
-}
-
-#password-input {
-  position: relative;
-  transform: translateX(0);
-  transition: transform 0.6s ease-in;
-  transition-delay: 0;
-}
-
-#authentication-container.authenticating #password-input {
-  transform: translateX(110%);
-}
-
-#authentication-container.error #password-input {
-  transition-delay: 0.4s;
-}
-
-.user {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  text-align: center;
-  height: 130px;
-  width: 130px;
-  padding: 10px;
-  -webkit-transition: all 0.3s cubic-bezier(.24, .59, .46, .93);
-  -moz-transition: all 0.3s cubic-bezier(.24, .59, .46, .93);
-  opacity: 0.7;
-  cursor: pointer;
-}
-
 .hidden {
-  opacity: 0.25;
+  opacity: 0 !important;
 }
 
-#authentication-container.hidden {
-  opacity: 0;
-}
-
-.user:not(.hidden):hover {
-  opacity: 0.85;
-}
-
-.user.hidden:hover {
-  opacity: 0.35;
-}
-
-.user.active:hover {
-  opacity: 1.0;
-}
-
-.user.active {
-  opacity: 1;
-}
-
-.user-name {
-  font-size: 20px;
-  font-weight: 600;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, .7);
-  color: white;
-}
-
-.user-face {
-  display: none;
-}
-
-.bubble {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-  width: 96px;
-  height: 96px;
-  background-color: hsl(175, 29%, 61%);
-  overflow: hidden;
-  background-repeat: no-repeat;
-  background-size: contain;
-  border-radius: 100%;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.3s cubic-bezier(.24, .59, .46, .93);
-}
-
-#controls {
-  display: flex;
+.fill-parent {
   position: absolute;
-  top: 6em;
-  padding: 1.3em;
-  right: 0;
   left: 0;
-  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.mask-edges {
+  -webkit-mask-image: -webkit-linear-gradient(left, rgba(30, 87, 153, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(125, 185, 232, 0) 100%);
+}
+
+#full-background {
+  z-index: -10;
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+  background-image: url("/usr/share/backgrounds/login.jpg");
+}
+
+.overlay {
+  background-color: black;
+  z-index: -9;
+  opacity: 0.6;
+  transition: all 0.5s ease-in-out;
+}
+
+#gradient-overlay {
+  background-color: none;
+  opacity: .9;
+  background: linear-gradient(30deg, transparent 70%, rgba(0, 0, 0, .9) 100%);
+}
+
+#clock-and-controls-wrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 20;
+}
+
+#big-clock {
+  padding: 0 .2em 0 0;
+  text-align: right;
+  font-size: 5em;
+}
+
+#system-controls {
+  display: flex;
+  padding: 1.3em;
   flex-direction: row-reverse;
   align-items: flex-end;
 }
@@ -298,36 +147,203 @@ input::-webkit-input-placeholder {
   transform: translate(28px, 80%) scale(1.15, 1.15);
 }
 
-#session-list-hider {
-  z-index: 10;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 80%;
-  overflow: hidden;
-  text-align: center;
-  -webkit-mask-image: -webkit-linear-gradient(left, rgba(30, 87, 153, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(125, 185, 232, 0) 100%);
+.system-button:nth-of-type(odd):active {
+  transform: scale(0.95, 0.95);
 }
 
-#session-list-floater {
-  position: fixed;
+.system-button:nth-of-type(even):active {
+  transform: translate(28px, 80%) scale(0.95, 0.95);
+}
+
+#login-section-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  user-select: auto;
+  pointer-events: auto;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#login-section-wrapper.hidden {
+  user-select: none;
+  pointer-events: none;
+}
+
+#user-list-wrapper {}
+
+#user-list {
+  position: relative;
   left: 0;
   right: 0;
-  bottom: 10px;
-  overflow: hidden;
-  display: inline;
+  display: flex;
   -webkit-transition: all 0.3s cubic-bezier(.24, .59, .46, .93);
   -moz-transition: all 0.3s cubic-bezier(.24, .59, .46, .93);
 }
 
-#session-list {
+.user {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  width: 130px;
+  padding: 10px;
+  -webkit-transition: all 0.3s cubic-bezier(.24, .59, .46, .93);
+  -moz-transition: all 0.3s cubic-bezier(.24, .59, .46, .93);
+}
+
+.user.hidden {
+  opacity: 1 !important;
+}
+
+.user.hidden .user-image, .user.hidden .user-name {
+  opacity: 0.25;
+}
+
+.user.active .user-image, .user.active .user-name {
+  opacity: 1;
+}
+
+.user-name {
+  font-size: 20px;
+  font-weight: 600;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, .7);
+  color: white;
+  opacity: 0.7;
+  -webkit-transition: all 0.3s cubic-bezier(.24, .59, .46, .93);
+  -moz-transition: all 0.3s cubic-bezier(.24, .59, .46, .93);
+  cursor: default;
+}
+
+.user-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  width: 96px;
+  height: 96px;
+  background-color: hsl(175, 29%, 61%);
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 100%;
+  -webkit-transition: all 0.3s cubic-bezier(.24, .59, .46, .93);
+  -moz-transition: all 0.3s cubic-bezier(.24, .59, .46, .93);
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.user-image:not(.hidden):hover, .user-image:not(.hidden):hover ~ .user-name {
+  opacity: 0.85;
+}
+
+.user-image.hidden:hover, .user-image.hidden:hover ~ .user-name {
+  opacity: 0.35;
+}
+
+.user-image.active:hover, .user-image.active:hover ~ .user-name {
+  opacity: 1.0;
+}
+
+#authentication-wrapper {
+  text-align: center;
+  padding: 10px;
+  -webkit-transition: all 0.6s cubic-bezier(.24, .59, .46, .93);
+  -moz-transition: all 0.6s cubic-bezier(.24, .59, .46, .93);
+}
+
+#authentication-wrapper.hidden {
+  user-select: none;
+  pointer-events: none;
+}
+
+@keyframes authenticating_blink {
+  0% { text-shadow: 0 0 3px white; }
+  50% { text-shadow: 0 0 8px white; }
+  100% { text-shadow: 0 0 3px white; }
+}
+
+#password-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 7px;
+}
+
+#password-input {
+  position: relative;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in;
+  transition-delay: 0;
+}
+
+#authentication-wrapper.authenticating #password-input {
+  transform: translateX(110%);
+}
+
+#authentication-wrapper.error #password-input {
+  transition-delay: 0.4s;
+}
+
+#password-bits {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  white-space: nowrap;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 30px;
+  line-height: 30px;
+  display: block;
+  color: #00e000;
   opacity: 0;
+  text-shadow: 0 0 3px white;
+}
+
+#authentication-wrapper.authenticating #password-bits {
+  animation-name: authenticating_blink;
+  animation-duration: 0.07s;
+  animation-iteration-count: infinite;
+}
+
+#authentication-message {
+  opacity: 0;
+  -webkit-transition: all 0.3s cubic-bezier(.24, .59, .46, .93);
+  -moz-transition: all 0.3s cubic-bezier(.24, .59, .46, .93);
+  user-select: none;
+  pointer-events: none;
+}
+
+#authentication-message.error {
+  color: hsl(359, 100%, 60%);
+}
+
+#authentication-message.active {
+  opacity: 1;
+}
+
+#session-list-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: .4em;
+  text-align: center;
+  transition: transform 0.4s ease-in-out;
+  transform: translateY(0);
+}
+
+#session-list-wrapper.hidden {
+  transform: translateY(150%);
+  opacity: 1 !important;
+  user-select: none;
+  pointer-events: none;
+}
+
+#session-list {
+  position: relative;
+  display: inline-block;
   -webkit-transition: all 0.3s cubic-bezier(.24, .59, .46, .93);
   -moz-transition: all 0.3s cubic-bezier(.24, .59, .46, .93);
 }
@@ -335,22 +351,12 @@ input::-webkit-input-placeholder {
 .session {
   cursor: pointer;
   opacity: 0.50;
-  display: inline;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  display: inline-block;
+  margin: 0 1.5em;
   -webkit-transition: all 0.3s cubic-bezier(.24, .59, .46, .93);
   -moz-transition: all 0.3s cubic-bezier(.24, .59, .46, .93);
 }
 
 .session.active {
   opacity: 1;
-}
-
-#big-clock {
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: 0 .2em 0 0;
-  text-align: right;
-  font-size: 5em;
 }
