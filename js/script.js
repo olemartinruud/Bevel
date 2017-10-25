@@ -8,6 +8,7 @@ var ICON_FOLDER = THEME_FOLDER + 'resources/icons/hex/';
 var DUMMY_FOLDER = THEME_FOLDER + 'resources/dummy/';
 var CLOCK_FORMAT = 'HH:mm';
 var CLOCK_UPDATE_TIME_MS = 60000;
+var FAST_VERSION = false;
 
 // Globals
 var authenticating = false;
@@ -207,25 +208,28 @@ function doAuthentication (password) {
   $('#authentication-message').removeClass('error').text(AUTHENTICATION_BEGIN_MESSAGE).addClass('active');
   $('#password-input').attr('disabled', 'disabled');
 
-  var passwordBitsElement = $('#password-bits');
+  if (!FAST_VERSION) {
+    var passwordBitsElement = $('#password-bits');
 
-  var passwordHash = hashCode($('#password-input').val()).toString(2).replace('-', '');
-  var counter = 1;
-  var hashLength = passwordHash.length;
-  var intervalId = setInterval(function () {
-    if (counter + 3 >= hashLength) {
-      clearInterval(intervalId);
-      passwordBitsElement.addClass('shift-of-screen');
-    }
-    passwordBitsElement.prepend(passwordHash.substr(hashLength - counter - 2, 3));
-    counter += 3;
-  }, 5);
+    var passwordHash = hashCode($('#password-input').val()).toString(2).replace('-', '');
+    var counter = 1;
+    var hashLength = passwordHash.length;
+    var intervalId = setInterval(function () {
+      if (counter + 3 >= hashLength) {
+        clearInterval(intervalId);
+        passwordBitsElement.addClass('shift-of-screen');
+      }
+      passwordBitsElement.prepend(passwordHash.substr(hashLength - counter - 2, 3));
+      counter += 3;
+    }, 5);
+  }
+
   setTimeout(function () {
     authenticating = true;
     // var userData = activeUser.data('user');
     // lightdm.start_authentication(userData.name);
     lightdm.provide_secret(password);
-  }, 800);
+  }, FAST_VERSION ? 100 : 800);
 }
 
 /**
@@ -248,7 +252,7 @@ function finishAuthentication () {
     authenticating = false;
 
     $('#authentication-wrapper').removeClass('authenticating');
-    $('#password-bits').html('').removeClass('shift-of-screen');
+    if (!FAST_VERSION) $('#password-bits').html('').removeClass('shift-of-screen');
 
     // Just reselecting would be treated as an unselect, so we clear activeUser
     // first.
@@ -265,7 +269,7 @@ function finishAuthentication () {
       setTimeout(function () {
         $('#authentication-message').removeClass('active error');
       }, 3000); // TODO: This might fade out the message incorrectly if it changed.
-    }, 700);
+    }, FAST_VERSION ? 200 : 700);
   }
 }
 
