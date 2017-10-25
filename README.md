@@ -16,3 +16,10 @@ Installation
 3. Specify a folder of backgrounds you want in `/etc/lightdm/lightdm-webkit-greeter.conf`. _PS! This folder has to be accessible from lightdm-user._
 
 Obviously you'll need lightdm and lightdm-webkit-greeter.
+
+Screenshots
+-----------
+
+![](https://raw.githubusercontent.com/olemartinruud/bevelhex/master/resources/screenshots/screenshot1.png)
+
+![](https://raw.githubusercontent.com/olemartinruud/bevelhex/master/resources/screenshots/screenshot2.png)
