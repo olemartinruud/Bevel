@@ -263,49 +263,44 @@ input::-webkit-input-placeholder {
   pointer-events: none;
 }
 
-@keyframes authenticating_blink {
-  0% { text-shadow: 0 0 3px white; }
-  50% { text-shadow: 0 0 8px white; }
-  100% { text-shadow: 0 0 3px white; }
+#password-container {
+  position: relative;
+  display: inline-block;
 }
 
-#password-container {
+#password-input-container {
   position: relative;
   overflow: hidden;
   border-radius: 7px;
+  display: inline-block;
 }
 
 #password-input {
   position: relative;
-  transform: translateX(0);
-  transition: transform 0.6s ease-in;
-  transition-delay: 0;
+  left: 0;
+  transition: left 0.6s ease-in;
 }
 
 #authentication-wrapper.authenticating #password-input {
-  transform: translateX(110%);
-}
-
-#authentication-wrapper.error #password-input {
-  transition-delay: 0.4s;
+  left: 120%;
 }
 
 #password-bits {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 30px;
+  left: 100%;
+  top: 0;
+  height: 100%;
   line-height: 30px;
   display: block;
   color: #00e000;
-  opacity: 0;
+  opacity: 1;
   text-shadow: 0 0 3px white;
+  text-align: left;
+  transition: left 0.9s linear;
 }
 
-#authentication-wrapper.authenticating #password-bits {
-  animation-name: authenticating_blink;
-  animation-duration: 0.07s;
-  animation-iteration-count: infinite;
+#password-bits.shift-of-screen {
+  left: 1200px;
 }
 
 #authentication-message {

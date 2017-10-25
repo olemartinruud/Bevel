@@ -14,6 +14,17 @@ var activeSession = null;
 var availableUsers = [];
 var availableSessions = [];
 
+function hashCode (str) {
+  var hash = 0;
+  if (str.length === 0) return hash;
+  for (var i = 0; i < str.length; i++) {
+    var char = str.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash = hash & hash; // Convert to 32bit integer
+  }
+  return hash;
+};
+
 /**
  * Gets the list of available users from lightdm and fills out the #user-list
  * element with them. Records the elements created for each user in the
@@ -189,17 +200,30 @@ function doAuthentication (password) {
 
   $('#authentication-wrapper').removeClass('error');
   $('#authentication-wrapper').addClass('authenticating');
-  $('#password-bits').removeClass('hidden');
+
   // Display the message for this event and disable the form.
   $('#authentication-message').removeClass('error').text(AUTHENTICATION_BEGIN_MESSAGE).addClass('active');
   $('#password-input').attr('disabled', 'disabled');
 
+  var passwordBitsElement = $('#password-bits');
+
+  var passwordHash = hashCode($('#password-input').val()).toString(2).replace('-', '');
+  var counter = 1;
+  var hashLength = passwordHash.length;
+  var intervalId = setInterval(function () {
+    if (counter + 3 >= hashLength) {
+      clearInterval(intervalId);
+      passwordBitsElement.addClass('shift-of-screen');
+    }
+    passwordBitsElement.prepend(passwordHash.substr(hashLength - counter - 2, 3));
+    counter += 3;
+  }, 5);
   setTimeout(function () {
     authenticating = true;
     // var userData = activeUser.data('user');
     // lightdm.start_authentication(userData.name);
     lightdm.provide_secret(password);
-  }, 900);
+  }, 800);
 }
 
 /**
@@ -216,13 +240,13 @@ function finishAuthentication () {
     // controls.
     setTimeout(function () {
       lightdm.login(lightdm.authentication_user, activeSession.data('id'));
-    }, 500);
+    }, 700);
   } else {
     // Authentication failed. Reset the password form and display a message.
     authenticating = false;
 
-    $('#authentication-wrapper').addClass('error');
     $('#authentication-wrapper').removeClass('authenticating');
+    $('#password-bits').html('').removeClass('shift-of-screen');
 
     // Just reselecting would be treated as an unselect, so we clear activeUser
     // first.
@@ -239,7 +263,7 @@ function finishAuthentication () {
       setTimeout(function () {
         $('#authentication-message').removeClass('active error');
       }, 3000); // TODO: This might fade out the message incorrectly if it changed.
-    }, 900);
+    }, 700);
   }
 }
 
