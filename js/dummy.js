@@ -10,87 +10,87 @@ if (!('lightdm' in window)) {
       {
         'description': 'Cherokee',
         'short_description': 'chr',
-        'name': 'us	chr'
+        'name': 'us chr'
       },
       {
         'description': 'English (US, with euro on 5)',
         'short_description': '',
-        'name': 'us	euro'
+        'name': 'us euro'
       },
       {
         'description': 'English (US, international with dead keys)',
         'short_description': '',
-        'name': 'us	intl'
+        'name': 'us intl'
       },
       {
         'description': 'English (US, alternative international)',
         'short_description': '',
-        'name': 'us	alt-intl'
+        'name': 'us alt-intl'
       },
       {
         'description': 'English (Colemak)',
         'short_description': '',
-        'name': 'us	colemak'
+        'name': 'us colemak'
       },
       {
         'description': 'English (Dvorak)',
         'short_description': '',
-        'name': 'us	dvorak'
+        'name': 'us dvorak'
       },
       {
         'description': 'English (Dvorak international with dead keys)',
         'short_description': '',
-        'name': 'us	dvorak-intl'
+        'name': 'us dvorak-intl'
       },
       {
         'description': 'English (Dvorak alternative international no dead keys)',
         'short_description': '',
-        'name': 'us	dvorak-alt-intl'
+        'name': 'us dvorak-alt-intl'
       },
       {
         'description': 'English (left handed Dvorak)',
         'short_description': '',
-        'name': 'us	dvorak-l'
+        'name': 'us dvorak-l'
       },
       {
         'description': 'English (right handed Dvorak)',
         'short_description': '',
-        'name': 'us	dvorak-r'
+        'name': 'us dvorak-r'
       },
       {
         'description': 'English (classic Dvorak)',
         'short_description': '',
-        'name': 'us	dvorak-classic'
+        'name': 'us dvorak-classic'
       },
       {
         'description': 'English (programmer Dvorak)',
         'short_description': '',
-        'name': 'us	dvp'
+        'name': 'us dvp'
       },
       {
         'description': 'Russian (US, phonetic)',
         'short_description': 'ru',
-        'name': 'us	rus'
+        'name': 'us rus'
       },
       {
         'description': 'English (Macintosh)',
         'short_description': '',
-        'name': 'us	mac'
+        'name': 'us mac'
       },
       {
         'description': 'English (international AltGr dead keys)',
         'short_description': '',
-        'name': 'us	altgr-intl'
+        'name': 'us altgr-intl'
       },
       {
         'description': 'English (layout toggle on multiply/divide key)',
         'short_description': '',
-        'name': 'us	olpc2'
+        'name': 'us olpc2'
       },
       {
         'description': 'Serbo-Croatian (US)',
         'short_description': '',
-        'name': 'us	hbs'
+        'name': 'us hbs'
       },
       {
         'description': 'Catalan',
@@ -105,27 +105,27 @@ if (!('lightdm' in window)) {
       {
         'description': 'Pashto',
         'short_description': 'ps',
-        'name': 'af	ps'
+        'name': 'af ps'
       },
       {
         'description': 'Uzbek (Afghanistan)',
         'short_description': 'uz',
-        'name': 'af	uz'
+        'name': 'af uz'
       },
       {
         'description': 'Pashto (Afghanistan, OLPC)',
         'short_description': 'ps',
-        'name': 'af	olpc-ps'
+        'name': 'af olpc-ps'
       },
       {
         'description': 'Persian (Afghanistan, Dari OLPC)',
         'short_description': 'fa',
-        'name': 'af	fa-olpc'
+        'name': 'af fa-olpc'
       },
       {
         'description': 'Uzbek (Afghanistan, OLPC)',
         'short_description': 'uz',
-        'name': 'af	uz-olpc'
+        'name': 'af uz-olpc'
       },
       {
         'description': 'Arabic',
@@ -135,32 +135,32 @@ if (!('lightdm' in window)) {
       {
         'description': 'Arabic (azerty)',
         'short_description': '',
-        'name': 'ara	azerty'
+        'name': 'ara azerty'
       },
       {
         'description': 'Arabic (azerty/digits)',
         'short_description': '',
-        'name': 'ara	azerty_digits'
+        'name': 'ara azerty_digits'
       },
       {
         'description': 'Arabic (digits)',
         'short_description': '',
-        'name': 'ara	digits'
+        'name': 'ara digits'
       },
       {
         'description': 'Arabic (qwerty)',
         'short_description': '',
-        'name': 'ara	qwerty'
+        'name': 'ara qwerty'
       },
       {
         'description': 'Arabic (qwerty/digits)',
         'short_description': '',
-        'name': 'ara	qwerty_digits'
+        'name': 'ara qwerty_digits'
       },
       {
         'description': 'Arabic (Buckwalter)',
         'short_description': '',
-        'name': 'ara	buckwalter'
+        'name': 'ara buckwalter'
       },
       {
         'description': 'Albanian',
@@ -175,27 +175,27 @@ if (!('lightdm' in window)) {
       {
         'description': 'Armenian (phonetic)',
         'short_description': '',
-        'name': 'am	phonetic'
+        'name': 'am phonetic'
       },
       {
         'description': 'Armenian (alternative phonetic)',
         'short_description': '',
-        'name': 'am	phonetic-alt'
+        'name': 'am phonetic-alt'
       },
       {
         'description': 'Armenian (eastern)',
         'short_description': '',
-        'name': 'am	eastern'
+        'name': 'am eastern'
       },
       {
         'description': 'Armenian (western)',
         'short_description': '',
-        'name': 'am	western'
+        'name': 'am western'
       },
       {
         'description': 'Armenian (alternative eastern)',
         'short_description': '',
-        'name': 'am	eastern-alt'
+        'name': 'am eastern-alt'
       },
       {
         'description': 'German (Austria)',
@@ -205,17 +205,17 @@ if (!('lightdm' in window)) {
       {
         'description': 'German (Austria, eliminate dead keys)',
         'short_description': '',
-        'name': 'at	nodeadkeys'
+        'name': 'at nodeadkeys'
       },
       {
         'description': 'German (Austria, Sun dead keys)',
         'short_description': '',
-        'name': 'at	sundeadkeys'
+        'name': 'at sundeadkeys'
       },
       {
         'description': 'German (Austria, Macintosh)',
         'short_description': '',
-        'name': 'at	mac'
+        'name': 'at mac'
       },
       {
         'description': 'Azerbaijani',
@@ -225,7 +225,7 @@ if (!('lightdm' in window)) {
       {
         'description': 'Azerbaijani (Cyrillic)',
         'short_description': '',
-        'name': 'az	cyrillic'
+        'name': 'az cyrillic'
       },
       {
         'description': 'Belarusian',
@@ -235,12 +235,12 @@ if (!('lightdm' in window)) {
       {
         'description': 'Belarusian (legacy)',
         'short_description': '',
-        'name': 'by	legacy'
+        'name': 'by legacy'
       },
       {
         'description': 'Belarusian (Latin)',
         'short_description': '',
-        'name': 'by	latin'
+        'name': 'by latin'
       },
       {
         'description': 'Belgian',
@@ -250,37 +250,37 @@ if (!('lightdm' in window)) {
       {
         'description': 'Belgian (alternative)',
         'short_description': '',
-        'name': 'be	oss'
+        'name': 'be oss'
       },
       {
         'description': 'Belgian (alternative, latin-9 only)',
         'short_description': '',
-        'name': 'be	oss_latin9'
+        'name': 'be oss_latin9'
       },
       {
         'description': 'Belgian (alternative, Sun dead keys)',
         'short_description': '',
-        'name': 'be	oss_sundeadkeys'
+        'name': 'be oss_sundeadkeys'
       },
       {
         'description': 'Belgian (ISO alternate)',
         'short_description': '',
-        'name': 'be	iso-alternate'
+        'name': 'be iso-alternate'
       },
       {
         'description': 'Belgian (eliminate dead keys)',
         'short_description': '',
-        'name': 'be	nodeadkeys'
+        'name': 'be nodeadkeys'
       },
       {
         'description': 'Belgian (Sun dead keys)',
         'short_description': '',
-        'name': 'be	sundeadkeys'
+        'name': 'be sundeadkeys'
       },
       {
         'description': 'Belgian (Wang model 724 azerty)',
         'short_description': '',
-        'name': 'be	wang'
+        'name': 'be wang'
       },
       {
         'description': 'Bengali',
@@ -290,7 +290,7 @@ if (!('lightdm' in window)) {
       {
         'description': 'Bengali (Probhat)',
         'short_description': '',
-        'name': 'bd	probhat'
+        'name': 'bd probhat'
       },
       {
         'description': 'Indian',
@@ -300,132 +300,132 @@ if (!('lightdm' in window)) {
       {
         'description': 'Bengali (India)',
         'short_description': 'bn',
-        'name': 'in	ben'
+        'name': 'in ben'
       },
       {
         'description': 'Bengali (India, Probhat)',
         'short_description': 'bn',
-        'name': 'in	ben_probhat'
+        'name': 'in ben_probhat'
       },
       {
         'description': 'Bengali (India, Baishakhi)',
         'short_description': '',
-        'name': 'in	ben_baishakhi'
+        'name': 'in ben_baishakhi'
       },
       {
         'description': 'Bengali (India, Bornona)',
         'short_description': '',
-        'name': 'in	ben_bornona'
+        'name': 'in ben_bornona'
       },
       {
         'description': 'Bengali (India, Uni Gitanjali)',
         'short_description': '',
-        'name': 'in	ben_gitanjali'
+        'name': 'in ben_gitanjali'
       },
       {
         'description': 'Bengali (India, Baishakhi Inscript)',
         'short_description': '',
-        'name': 'in	ben_inscript'
+        'name': 'in ben_inscript'
       },
       {
         'description': 'Gujarati',
         'short_description': 'gu',
-        'name': 'in	guj'
+        'name': 'in guj'
       },
       {
         'description': 'Punjabi (Gurmukhi)',
         'short_description': 'pa',
-        'name': 'in	guru'
+        'name': 'in guru'
       },
       {
         'description': 'Punjabi (Gurmukhi Jhelum)',
         'short_description': 'pa',
-        'name': 'in	jhelum'
+        'name': 'in jhelum'
       },
       {
         'description': 'Kannada',
         'short_description': 'kn',
-        'name': 'in	kan'
+        'name': 'in kan'
       },
       {
         'description': 'Malayalam',
         'short_description': 'ml',
-        'name': 'in	mal'
+        'name': 'in mal'
       },
       {
         'description': 'Malayalam (Lalitha)',
         'short_description': 'ml',
-        'name': 'in	mal_lalitha'
+        'name': 'in mal_lalitha'
       },
       {
         'description': 'Malayalam (enhanced Inscript with Rupee Sign)',
         'short_description': 'ml',
-        'name': 'in	mal_enhanced'
+        'name': 'in mal_enhanced'
       },
       {
         'description': 'Oriya',
         'short_description': 'or',
-        'name': 'in	ori'
+        'name': 'in ori'
       },
       {
         'description': 'Tamil (Unicode)',
         'short_description': 'ta',
-        'name': 'in	tam_unicode'
+        'name': 'in tam_unicode'
       },
       {
         'description': 'Tamil (keyboard with numerals)',
         'short_description': 'ta',
-        'name': 'in	tam_keyboard_with_numerals'
+        'name': 'in tam_keyboard_with_numerals'
       },
       {
         'description': 'Tamil (TAB typewriter)',
         'short_description': 'ta',
-        'name': 'in	tam_TAB'
+        'name': 'in tam_TAB'
       },
       {
         'description': 'Tamil (TSCII typewriter)',
         'short_description': 'ta',
-        'name': 'in	tam_TSCII'
+        'name': 'in tam_TSCII'
       },
       {
         'description': 'Tamil',
         'short_description': 'ta',
-        'name': 'in	tam'
+        'name': 'in tam'
       },
       {
         'description': 'Telugu',
         'short_description': 'te',
-        'name': 'in	tel'
+        'name': 'in tel'
       },
       {
         'description': 'Urdu (phonetic)',
         'short_description': 'ur',
-        'name': 'in	urd-phonetic'
+        'name': 'in urd-phonetic'
       },
       {
         'description': 'Urdu (alternative phonetic)',
         'short_description': 'ur',
-        'name': 'in	urd-phonetic3'
+        'name': 'in urd-phonetic3'
       },
       {
         'description': 'Urdu (WinKeys)',
         'short_description': 'ur',
-        'name': 'in	urd-winkeys'
+        'name': 'in urd-winkeys'
       },
       {
         'description': 'Hindi (Bolnagri)',
         'short_description': 'hi',
-        'name': 'in	bolnagri'
+        'name': 'in bolnagri'
       },
       {
         'description': 'Hindi (Wx)',
         'short_description': 'hi',
-        'name': 'in	hin-wx'
+        'name': 'in hin-wx'
       },
       {
         'description': 'English (India, with RupeeSign)',
         'short_description': 'en',
-        'name': 'in	eng'
+        'name': 'in eng'
       },
       {
         'description': 'Bosnian',
@@ -435,22 +435,22 @@ if (!('lightdm' in window)) {
       {
         'description': 'Bosnian (use guillemets for quotes)',
         'short_description': '',
-        'name': 'ba	alternatequotes'
+        'name': 'ba alternatequotes'
       },
       {
         'description': 'Bosnian (use Bosnian digraphs)',
         'short_description': '',
-        'name': 'ba	unicode'
+        'name': 'ba unicode'
       },
       {
         'description': 'Bosnian (US keyboard with Bosnian digraphs)',
         'short_description': '',
-        'name': 'ba	unicodeus'
+        'name': 'ba unicodeus'
       },
       {
         'description': 'Bosnian (US keyboard with Bosnian letters)',
         'short_description': '',
-        'name': 'ba	us'
+        'name': 'ba us'
       },
       {
         'description': 'Portuguese (Brazil)',
@@ -460,27 +460,27 @@ if (!('lightdm' in window)) {
       {
         'description': 'Portuguese (Brazil, eliminate dead keys)',
         'short_description': '',
-        'name': 'br	nodeadkeys'
+        'name': 'br nodeadkeys'
       },
       {
         'description': 'Portuguese (Brazil, Dvorak)',
         'short_description': '',
-        'name': 'br	dvorak'
+        'name': 'br dvorak'
       },
       {
         'description': 'Portuguese (Brazil, nativo)',
         'short_description': '',
-        'name': 'br	nativo'
+        'name': 'br nativo'
       },
       {
         'description': 'Portuguese (Brazil, nativo for USA keyboards)',
         'short_description': '',
-        'name': 'br	nativo-us'
+        'name': 'br nativo-us'
       },
       {
         'description': 'Portuguese (Brazil, nativo for Esperanto)',
         'short_description': '',
-        'name': 'br	nativo-epo'
+        'name': 'br nativo-epo'
       },
       {
         'description': 'Bulgarian',
@@ -490,12 +490,12 @@ if (!('lightdm' in window)) {
       {
         'description': 'Bulgarian (traditional phonetic)',
         'short_description': '',
-        'name': 'bg	phonetic'
+        'name': 'bg phonetic'
       },
       {
         'description': 'Bulgarian (new phonetic)',
         'short_description': '',
-        'name': 'bg	bas_phonetic'
+        'name': 'bg bas_phonetic'
       },
       {
         'description': 'Arabic (Morocco)',
@@ -505,37 +505,37 @@ if (!('lightdm' in window)) {
       {
         'description': 'French (Morocco)',
         'short_description': 'fr',
-        'name': 'ma	french'
+        'name': 'ma french'
       },
       {
         'description': 'Berber (Morocco, Tifinagh)',
         'short_description': 'ber',
-        'name': 'ma	tifinagh'
+        'name': 'ma tifinagh'
       },
       {
         'description': 'Berber (Morocco, Tifinagh alternative)',
         'short_description': 'ber',
-        'name': 'ma	tifinagh-alt'
+        'name': 'ma tifinagh-alt'
       },
       {
         'description': 'Berber (Morocco, Tifinagh alternative phonetic)',
         'short_description': 'ber',
-        'name': 'ma	tifinagh-alt-phonetic'
+        'name': 'ma tifinagh-alt-phonetic'
       },
       {
         'description': 'Berber (Morocco, Tifinagh extended)',
         'short_description': 'ber',
-        'name': 'ma	tifinagh-extended'
+        'name': 'ma tifinagh-extended'
       },
       {
         'description': 'Berber (Morocco, Tifinagh phonetic)',
         'short_description': 'ber',
-        'name': 'ma	tifinagh-phonetic'
+        'name': 'ma tifinagh-phonetic'
       },
       {
         'description': 'Berber (Morocco, Tifinagh extended phonetic)',
         'short_description': 'ber',
-        'name': 'ma	tifinagh-extended-phonetic'
+        'name': 'ma tifinagh-extended-phonetic'
       },
       {
         'description': 'English (Cameroon)',
@@ -545,22 +545,22 @@ if (!('lightdm' in window)) {
       {
         'description': 'French (Cameroon)',
         'short_description': '',
-        'name': 'cm	french'
+        'name': 'cm french'
       },
       {
         'description': 'Cameroon Multilingual (qwerty)',
         'short_description': '',
-        'name': 'cm	qwerty'
+        'name': 'cm qwerty'
       },
       {
         'description': 'Cameroon Multilingual (azerty)',
         'short_description': '',
-        'name': 'cm	azerty'
+        'name': 'cm azerty'
       },
       {
         'description': 'Cameroon Multilingual (Dvorak)',
         'short_description': '',
-        'name': 'cm	dvorak'
+        'name': 'cm dvorak'
       },
       {
         'description': 'Burmese',
@@ -575,37 +575,37 @@ if (!('lightdm' in window)) {
       {
         'description': 'French (Canada, Dvorak)',
         'short_description': 'fr',
-        'name': 'ca	fr-dvorak'
+        'name': 'ca fr-dvorak'
       },
       {
         'description': 'French (Canada, legacy)',
         'short_description': 'fr',
-        'name': 'ca	fr-legacy'
+        'name': 'ca fr-legacy'
       },
       {
         'description': 'Canadian Multilingual',
         'short_description': '',
-        'name': 'ca	multix'
+        'name': 'ca multix'
       },
       {
         'description': 'Canadian Multilingual (first part)',
         'short_description': '',
-        'name': 'ca	multi'
+        'name': 'ca multi'
       },
       {
         'description': 'Canadian Multilingual (second part)',
         'short_description': '',
-        'name': 'ca	multi-2gr'
+        'name': 'ca multi-2gr'
       },
       {
         'description': 'Inuktitut',
         'short_description': 'ike',
-        'name': 'ca	ike'
+        'name': 'ca ike'
       },
       {
         'description': 'English (Canada)',
         'short_description': 'en',
-        'name': 'ca	eng'
+        'name': 'ca eng'
       },
       {
         'description': 'French (Democratic Republic of the Congo)',
@@ -620,17 +620,17 @@ if (!('lightdm' in window)) {
       {
         'description': 'Tibetan',
         'short_description': '',
-        'name': 'cn	tib'
+        'name': 'cn tib'
       },
       {
         'description': 'Tibetan (with ASCII numerals)',
         'short_description': '',
-        'name': 'cn	tib_asciinum'
+        'name': 'cn tib_asciinum'
       },
       {
         'description': 'Uyghur',
         'short_description': '',
-        'name': 'cn	uig'
+        'name': 'cn uig'
       },
       {
         'description': 'Croatian',
@@ -640,22 +640,22 @@ if (!('lightdm' in window)) {
       {
         'description': 'Croatian (use guillemets for quotes)',
         'short_description': '',
-        'name': 'hr	alternatequotes'
+        'name': 'hr alternatequotes'
       },
       {
         'description': 'Croatian (use Croatian digraphs)',
         'short_description': '',
-        'name': 'hr	unicode'
+        'name': 'hr unicode'
       },
       {
         'description': 'Croatian (US keyboard with Croatian digraphs)',
         'short_description': '',
-        'name': 'hr	unicodeus'
+        'name': 'hr unicodeus'
       },
       {
         'description': 'Croatian (US keyboard with Croatian letters)',
         'short_description': '',
-        'name': 'hr	us'
+        'name': 'hr us'
       },
       {
         'description': 'Czech',
@@ -663,29 +663,29 @@ if (!('lightdm' in window)) {
         'name': 'cz'
       },
       {
-        'description': 'Czech (with <\|> key)',
+        'description': 'Czech (with <|> key)',
         'short_description': '',
-        'name': 'cz	bksl'
+        'name': 'cz bksl'
       },
       {
         'description': 'Czech (qwerty)',
         'short_description': '',
-        'name': 'cz	qwerty'
+        'name': 'cz qwerty'
       },
       {
         'description': 'Czech (qwerty, extended Backslash)',
         'short_description': '',
-        'name': 'cz	qwerty_bksl'
+        'name': 'cz qwerty_bksl'
       },
       {
         'description': 'Czech (UCW layout, accented letters only)',
         'short_description': '',
-        'name': 'cz	ucw'
+        'name': 'cz ucw'
       },
       {
         'description': 'Czech (US Dvorak with CZ UCW support)',
         'short_description': '',
-        'name': 'cz	dvorak-ucw'
+        'name': 'cz dvorak-ucw'
       },
       {
         'description': 'Danish',
@@ -695,22 +695,22 @@ if (!('lightdm' in window)) {
       {
         'description': 'Danish (eliminate dead keys)',
         'short_description': '',
-        'name': 'dk	nodeadkeys'
+        'name': 'dk nodeadkeys'
       },
       {
         'description': 'Danish (Macintosh)',
         'short_description': '',
-        'name': 'dk	mac'
+        'name': 'dk mac'
       },
       {
         'description': 'Danish (Macintosh, eliminate dead keys)',
         'short_description': '',
-        'name': 'dk	mac_nodeadkeys'
+        'name': 'dk mac_nodeadkeys'
       },
       {
         'description': 'Danish (Dvorak)',
         'short_description': '',
-        'name': 'dk	dvorak'
+        'name': 'dk dvorak'
       },
       {
         'description': 'Dutch',
@@ -720,17 +720,17 @@ if (!('lightdm' in window)) {
       {
         'description': 'Dutch (Sun dead keys)',
         'short_description': '',
-        'name': 'nl	sundeadkeys'
+        'name': 'nl sundeadkeys'
       },
       {
         'description': 'Dutch (Macintosh)',
         'short_description': '',
-        'name': 'nl	mac'
+        'name': 'nl mac'
       },
       {
         'description': 'Dutch (standard)',
         'short_description': '',
-        'name': 'nl	std'
+        'name': 'nl std'
       },
       {
         'description': 'Dzongkha',
@@ -745,17 +745,17 @@ if (!('lightdm' in window)) {
       {
         'description': 'Estonian (eliminate dead keys)',
         'short_description': '',
-        'name': 'ee	nodeadkeys'
+        'name': 'ee nodeadkeys'
       },
       {
         'description': 'Estonian (Dvorak)',
         'short_description': '',
-        'name': 'ee	dvorak'
+        'name': 'ee dvorak'
       },
       {
         'description': 'Estonian (US keyboard with Estonian letters)',
         'short_description': '',
-        'name': 'ee	us'
+        'name': 'ee us'
       },
       {
         'description': 'Persian',
@@ -765,27 +765,27 @@ if (!('lightdm' in window)) {
       {
         'description': 'Persian (with Persian Keypad)',
         'short_description': '',
-        'name': 'ir	pes_keypad'
+        'name': 'ir pes_keypad'
       },
       {
         'description': 'Kurdish (Iran, Latin Q)',
         'short_description': 'ku',
-        'name': 'ir	ku'
+        'name': 'ir ku'
       },
       {
         'description': 'Kurdish (Iran, F)',
         'short_description': 'ku',
-        'name': 'ir	ku_f'
+        'name': 'ir ku_f'
       },
       {
         'description': 'Kurdish (Iran, Latin Alt-Q)',
         'short_description': 'ku',
-        'name': 'ir	ku_alt'
+        'name': 'ir ku_alt'
       },
       {
         'description': 'Kurdish (Iran, Arabic-Latin)',
         'short_description': 'ku',
-        'name': 'ir	ku_ara'
+        'name': 'ir ku_ara'
       },
       {
         'description': 'Iraqi',
@@ -795,22 +795,22 @@ if (!('lightdm' in window)) {
       {
         'description': 'Kurdish (Iraq, Latin Q)',
         'short_description': 'ku',
-        'name': 'iq	ku'
+        'name': 'iq ku'
       },
       {
         'description': 'Kurdish (Iraq, F)',
         'short_description': 'ku',
-        'name': 'iq	ku_f'
+        'name': 'iq ku_f'
       },
       {
         'description': 'Kurdish (Iraq, Latin Alt-Q)',
         'short_description': 'ku',
-        'name': 'iq	ku_alt'
+        'name': 'iq ku_alt'
       },
       {
         'description': 'Kurdish (Iraq, Arabic-Latin)',
         'short_description': 'ku',
-        'name': 'iq	ku_ara'
+        'name': 'iq ku_ara'
       },
       {
         'description': 'Faroese',
@@ -820,7 +820,7 @@ if (!('lightdm' in window)) {
       {
         'description': 'Faroese (eliminate dead keys)',
         'short_description': '',
-        'name': 'fo	nodeadkeys'
+        'name': 'fo nodeadkeys'
       },
       {
         'description': 'Finnish',
@@ -830,22 +830,22 @@ if (!('lightdm' in window)) {
       {
         'description': 'Finnish (classic)',
         'short_description': '',
-        'name': 'fi	classic'
+        'name': 'fi classic'
       },
       {
         'description': 'Finnish (classic, eliminate dead keys)',
         'short_description': '',
-        'name': 'fi	nodeadkeys'
+        'name': 'fi nodeadkeys'
       },
       {
         'description': 'Northern Saami (Finland)',
         'short_description': '',
-        'name': 'fi	smi'
+        'name': 'fi smi'
       },
       {
         'description': 'Finnish (Macintosh)',
         'short_description': '',
-        'name': 'fi	mac'
+        'name': 'fi mac'
       },
       {
         'description': 'French',
@@ -855,82 +855,82 @@ if (!('lightdm' in window)) {
       {
         'description': 'French (eliminate dead keys)',
         'short_description': '',
-        'name': 'fr	nodeadkeys'
+        'name': 'fr nodeadkeys'
       },
       {
         'description': 'French (Sun dead keys)',
         'short_description': '',
-        'name': 'fr	sundeadkeys'
+        'name': 'fr sundeadkeys'
       },
       {
         'description': 'French (alternative)',
         'short_description': '',
-        'name': 'fr	oss'
+        'name': 'fr oss'
       },
       {
         'description': 'French (alternative, latin-9 only)',
         'short_description': '',
-        'name': 'fr	oss_latin9'
+        'name': 'fr oss_latin9'
       },
       {
         'description': 'French (alternative, eliminate dead keys)',
         'short_description': '',
-        'name': 'fr	oss_nodeadkeys'
+        'name': 'fr oss_nodeadkeys'
       },
       {
         'description': 'French (alternative, Sun dead keys)',
         'short_description': '',
-        'name': 'fr	oss_sundeadkeys'
+        'name': 'fr oss_sundeadkeys'
       },
       {
         'description': 'French (legacy, alternative)',
         'short_description': '',
-        'name': 'fr	latin9'
+        'name': 'fr latin9'
       },
       {
         'description': 'French (legacy, alternative, eliminate dead keys)',
         'short_description': '',
-        'name': 'fr	latin9_nodeadkeys'
+        'name': 'fr latin9_nodeadkeys'
       },
       {
         'description': 'French (legacy, alternative, Sun dead keys)',
         'short_description': '',
-        'name': 'fr	latin9_sundeadkeys'
+        'name': 'fr latin9_sundeadkeys'
       },
       {
         'description': 'French (Bepo, ergonomic, Dvorak way)',
         'short_description': '',
-        'name': 'fr	bepo'
+        'name': 'fr bepo'
       },
       {
         'description': 'French (Bepo, ergonomic, Dvorak way, latin-9 only)',
         'short_description': '',
-        'name': 'fr	bepo_latin9'
+        'name': 'fr bepo_latin9'
       },
       {
         'description': 'French (Dvorak)',
         'short_description': '',
-        'name': 'fr	dvorak'
+        'name': 'fr dvorak'
       },
       {
         'description': 'French (Macintosh)',
         'short_description': '',
-        'name': 'fr	mac'
+        'name': 'fr mac'
       },
       {
         'description': 'French (Breton)',
         'short_description': '',
-        'name': 'fr	bre'
+        'name': 'fr bre'
       },
       {
         'description': 'Occitan',
         'short_description': '',
-        'name': 'fr	oci'
+        'name': 'fr oci'
       },
       {
         'description': 'Georgian (France, AZERTY Tskapo)',
         'short_description': '',
-        'name': 'fr	geo'
+        'name': 'fr geo'
       },
       {
         'description': 'English (Ghana)',
@@ -940,42 +940,42 @@ if (!('lightdm' in window)) {
       {
         'description': 'English (Ghana, multilingual)',
         'short_description': '',
-        'name': 'gh	generic'
+        'name': 'gh generic'
       },
       {
         'description': 'Akan',
         'short_description': 'ak',
-        'name': 'gh	akan'
+        'name': 'gh akan'
       },
       {
         'description': 'Ewe',
         'short_description': 'ee',
-        'name': 'gh	ewe'
+        'name': 'gh ewe'
       },
       {
         'description': 'Fula',
         'short_description': 'ff',
-        'name': 'gh	fula'
+        'name': 'gh fula'
       },
       {
         'description': 'Ga',
         'short_description': 'gaa',
-        'name': 'gh	ga'
+        'name': 'gh ga'
       },
       {
         'description': 'Hausa',
         'short_description': 'ha',
-        'name': 'gh	hausa'
+        'name': 'gh hausa'
       },
       {
         'description': 'Avatime',
         'short_description': 'avn',
-        'name': 'gh	avn'
+        'name': 'gh avn'
       },
       {
         'description': 'English (Ghana, GILLBT)',
         'short_description': '',
-        'name': 'gh	gillbt'
+        'name': 'gh gillbt'
       },
       {
         'description': 'French (Guinea)',
@@ -990,22 +990,22 @@ if (!('lightdm' in window)) {
       {
         'description': 'Georgian (ergonomic)',
         'short_description': '',
-        'name': 'ge	ergonomic'
+        'name': 'ge ergonomic'
       },
       {
         'description': 'Georgian (MESS)',
         'short_description': '',
-        'name': 'ge	mess'
+        'name': 'ge mess'
       },
       {
         'description': 'Russian (Georgia)',
         'short_description': 'ru',
-        'name': 'ge	ru'
+        'name': 'ge ru'
       },
       {
         'description': 'Ossetian (Georgia)',
         'short_description': '',
-        'name': 'ge	os'
+        'name': 'ge os'
       },
       {
         'description': 'German',
@@ -1015,72 +1015,72 @@ if (!('lightdm' in window)) {
       {
         'description': 'German (dead acute)',
         'short_description': '',
-        'name': 'de	deadacute'
+        'name': 'de deadacute'
       },
       {
         'description': 'German (dead grave acute)',
         'short_description': '',
-        'name': 'de	deadgraveacute'
+        'name': 'de deadgraveacute'
       },
       {
         'description': 'German (eliminate dead keys)',
         'short_description': '',
-        'name': 'de	nodeadkeys'
+        'name': 'de nodeadkeys'
       },
       {
         'description': 'Romanian (Germany)',
         'short_description': '',
-        'name': 'de	ro'
+        'name': 'de ro'
       },
       {
         'description': 'Romanian (Germany, eliminate dead keys)',
         'short_description': '',
-        'name': 'de	ro_nodeadkeys'
+        'name': 'de ro_nodeadkeys'
       },
       {
         'description': 'German (Dvorak)',
         'short_description': '',
-        'name': 'de	dvorak'
+        'name': 'de dvorak'
       },
       {
         'description': 'German (Sun dead keys)',
         'short_description': '',
-        'name': 'de	sundeadkeys'
+        'name': 'de sundeadkeys'
       },
       {
         'description': 'German (Neo 2)',
         'short_description': '',
-        'name': 'de	neo'
+        'name': 'de neo'
       },
       {
         'description': 'German (Macintosh)',
         'short_description': '',
-        'name': 'de	mac'
+        'name': 'de mac'
       },
       {
         'description': 'German (Macintosh, eliminate dead keys)',
         'short_description': '',
-        'name': 'de	mac_nodeadkeys'
+        'name': 'de mac_nodeadkeys'
       },
       {
         'description': 'Lower Sorbian',
         'short_description': '',
-        'name': 'de	dsb'
+        'name': 'de dsb'
       },
       {
         'description': 'Lower Sorbian (qwertz)',
         'short_description': '',
-        'name': 'de	dsb_qwertz'
+        'name': 'de dsb_qwertz'
       },
       {
         'description': 'German (qwerty)',
         'short_description': '',
-        'name': 'de	qwerty'
+        'name': 'de qwerty'
       },
       {
         'description': 'Russian (Germany, phonetic)',
         'short_description': '',
-        'name': 'de	ru'
+        'name': 'de ru'
       },
       {
         'description': 'Greek',
@@ -1090,22 +1090,22 @@ if (!('lightdm' in window)) {
       {
         'description': 'Greek (simple)',
         'short_description': '',
-        'name': 'gr	simple'
+        'name': 'gr simple'
       },
       {
         'description': 'Greek (extended)',
         'short_description': '',
-        'name': 'gr	extended'
+        'name': 'gr extended'
       },
       {
         'description': 'Greek (eliminate dead keys)',
         'short_description': '',
-        'name': 'gr	nodeadkeys'
+        'name': 'gr nodeadkeys'
       },
       {
         'description': 'Greek (polytonic)',
         'short_description': '',
-        'name': 'gr	polytonic'
+        'name': 'gr polytonic'
       },
       {
         'description': 'Hungarian',
@@ -1115,97 +1115,97 @@ if (!('lightdm' in window)) {
       {
         'description': 'Hungarian (standard)',
         'short_description': '',
-        'name': 'hu	standard'
+        'name': 'hu standard'
       },
       {
         'description': 'Hungarian (eliminate dead keys)',
         'short_description': '',
-        'name': 'hu	nodeadkeys'
+        'name': 'hu nodeadkeys'
       },
       {
         'description': 'Hungarian (qwerty)',
         'short_description': '',
-        'name': 'hu	qwerty'
+        'name': 'hu qwerty'
       },
       {
         'description': 'Hungarian (101/qwertz/comma/dead keys)',
         'short_description': '',
-        'name': 'hu	101_qwertz_comma_dead'
+        'name': 'hu 101_qwertz_comma_dead'
       },
       {
         'description': 'Hungarian (101/qwertz/comma/eliminate dead keys)',
         'short_description': '',
-        'name': 'hu	101_qwertz_comma_nodead'
+        'name': 'hu 101_qwertz_comma_nodead'
       },
       {
         'description': 'Hungarian (101/qwertz/dot/dead keys)',
         'short_description': '',
-        'name': 'hu	101_qwertz_dot_dead'
+        'name': 'hu 101_qwertz_dot_dead'
       },
       {
         'description': 'Hungarian (101/qwertz/dot/eliminate dead keys)',
         'short_description': '',
-        'name': 'hu	101_qwertz_dot_nodead'
+        'name': 'hu 101_qwertz_dot_nodead'
       },
       {
         'description': 'Hungarian (101/qwerty/comma/dead keys)',
         'short_description': '',
-        'name': 'hu	101_qwerty_comma_dead'
+        'name': 'hu 101_qwerty_comma_dead'
       },
       {
         'description': 'Hungarian (101/qwerty/comma/eliminate dead keys)',
         'short_description': '',
-        'name': 'hu	101_qwerty_comma_nodead'
+        'name': 'hu 101_qwerty_comma_nodead'
       },
       {
         'description': 'Hungarian (101/qwerty/dot/dead keys)',
         'short_description': '',
-        'name': 'hu	101_qwerty_dot_dead'
+        'name': 'hu 101_qwerty_dot_dead'
       },
       {
         'description': 'Hungarian (101/qwerty/dot/eliminate dead keys)',
         'short_description': '',
-        'name': 'hu	101_qwerty_dot_nodead'
+        'name': 'hu 101_qwerty_dot_nodead'
       },
       {
         'description': 'Hungarian (102/qwertz/comma/dead keys)',
         'short_description': '',
-        'name': 'hu	102_qwertz_comma_dead'
+        'name': 'hu 102_qwertz_comma_dead'
       },
       {
         'description': 'Hungarian (102/qwertz/comma/eliminate dead keys)',
         'short_description': '',
-        'name': 'hu	102_qwertz_comma_nodead'
+        'name': 'hu 102_qwertz_comma_nodead'
       },
       {
         'description': 'Hungarian (102/qwertz/dot/dead keys)',
         'short_description': '',
-        'name': 'hu	102_qwertz_dot_dead'
+        'name': 'hu 102_qwertz_dot_dead'
       },
       {
         'description': 'Hungarian (102/qwertz/dot/eliminate dead keys)',
         'short_description': '',
-        'name': 'hu	102_qwertz_dot_nodead'
+        'name': 'hu 102_qwertz_dot_nodead'
       },
       {
         'description': 'Hungarian (102/qwerty/comma/dead keys)',
         'short_description': '',
-        'name': 'hu	102_qwerty_comma_dead'
+        'name': 'hu 102_qwerty_comma_dead'
       },
       {
         'description': 'Hungarian (102/qwerty/comma/eliminate dead keys)',
         'short_description': '',
-        'name': 'hu	102_qwerty_comma_nodead'
+        'name': 'hu 102_qwerty_comma_nodead'
       },
       {
         'description': 'Hungarian (102/qwerty/dot/dead keys)',
         'short_description': '',
-        'name': 'hu	102_qwerty_dot_dead'
+        'name': 'hu 102_qwerty_dot_dead'
       },
       {
         'description': 'Hungarian (102/qwerty/dot/eliminate dead keys)',
         'short_description': '',
-        'name': 'hu	102_qwerty_dot_nodead'
+        'name': 'hu 102_qwerty_dot_nodead'
       },
       {
         'description': 'Icelandic',
@@ -1215,22 +1215,22 @@ if (!('lightdm' in window)) {
       {
         'description': 'Icelandic (Sun dead keys)',
         'short_description': '',
-        'name': 'is	Sundeadkeys'
+        'name': 'is Sundeadkeys'
       },
       {
         'description': 'Icelandic (eliminate dead keys)',
         'short_description': '',
-        'name': 'is	nodeadkeys'
+        'name': 'is nodeadkeys'
       },
       {
         'description': 'Icelandic (Macintosh)',
         'short_description': '',
-        'name': 'is	mac'
+        'name': 'is mac'
       },
       {
         'description': 'Icelandic (Dvorak)',
         'short_description': '',
-        'name': 'is	dvorak'
+        'name': 'is dvorak'
       },
       {
         'description': 'Hebrew',
@@ -1240,17 +1240,17 @@ if (!('lightdm' in window)) {
       {
         'description': 'Hebrew (lyx)',
         'short_description': '',
-        'name': 'il	lyx'
+        'name': 'il lyx'
       },
       {
         'description': 'Hebrew (phonetic)',
         'short_description': '',
-        'name': 'il	phonetic'
+        'name': 'il phonetic'
       },
       {
         'description': 'Hebrew (Biblical, Tiro)',
         'short_description': '',
-        'name': 'il	biblical'
+        'name': 'il biblical'
       },
       {
         'description': 'Italian',
@@ -1260,22 +1260,22 @@ if (!('lightdm' in window)) {
       {
         'description': 'Italian (eliminate dead keys)',
         'short_description': '',
-        'name': 'it	nodeadkeys'
+        'name': 'it nodeadkeys'
       },
       {
         'description': 'Italian (Macintosh)',
         'short_description': '',
-        'name': 'it	mac'
+        'name': 'it mac'
       },
       {
         'description': 'Italian (US keyboard with Italian letters)',
         'short_description': '',
-        'name': 'it	us'
+        'name': 'it us'
       },
       {
         'description': 'Georgian (Italy)',
         'short_description': '',
-        'name': 'it	geo'
+        'name': 'it geo'
       },
       {
         'description': 'Japanese',
@@ -1285,27 +1285,27 @@ if (!('lightdm' in window)) {
       {
         'description': 'Japanese (Kana)',
         'short_description': '',
-        'name': 'jp	kana'
+        'name': 'jp kana'
       },
       {
         'description': 'Japanese (Kana 86)',
         'short_description': '',
-        'name': 'jp	kana86'
+        'name': 'jp kana86'
       },
       {
         'description': 'Japanese (OADG 109A)',
         'short_description': '',
-        'name': 'jp	OADG109A'
+        'name': 'jp OADG109A'
       },
       {
         'description': 'Japanese (Macintosh)',
         'short_description': '',
-        'name': 'jp	mac'
+        'name': 'jp mac'
       },
       {
         'description': 'Japanese (Dvorak)',
         'short_description': '',
-        'name': 'jp	dvorak'
+        'name': 'jp dvorak'
       },
       {
         'description': 'Kyrgyz',
@@ -1315,7 +1315,7 @@ if (!('lightdm' in window)) {
       {
         'description': 'Kyrgyz (phonetic)',
         'short_description': '',
-        'name': 'kg	phonetic'
+        'name': 'kg phonetic'
       },
       {
         'description': 'Khmer (Cambodia)',
@@ -1330,12 +1330,12 @@ if (!('lightdm' in window)) {
       {
         'description': 'Russian (Kazakhstan, with Kazakh)',
         'short_description': 'ru',
-        'name': 'kz	ruskaz'
+        'name': 'kz ruskaz'
       },
       {
         'description': 'Kazakh (with Russian)',
         'short_description': '',
-        'name': 'kz	kazrus'
+        'name': 'kz kazrus'
       },
       {
         'description': 'Lao',
@@ -1345,7 +1345,7 @@ if (!('lightdm' in window)) {
       {
         'description': 'Lao (STEA proposed standard layout)',
         'short_description': '',
-        'name': 'la	stea'
+        'name': 'la stea'
       },
       {
         'description': 'Spanish (Latin American)',
@@ -1355,17 +1355,17 @@ if (!('lightdm' in window)) {
       {
         'description': 'Spanish (Latin American, eliminate dead keys)',
         'short_description': '',
-        'name': 'latam	nodeadkeys'
+        'name': 'latam nodeadkeys'
       },
       {
         'description': 'Spanish (Latin American, include dead tilde)',
         'short_description': '',
-        'name': 'latam	deadtilde'
+        'name': 'latam deadtilde'
       },
       {
         'description': 'Spanish (Latin American, Sun dead keys)',
         'short_description': '',
-        'name': 'latam	sundeadkeys'
+        'name': 'latam sundeadkeys'
       },
       {
         'description': 'Lithuanian',
@@ -1375,27 +1375,27 @@ if (!('lightdm' in window)) {
       {
         'description': 'Lithuanian (standard)',
         'short_description': '',
-        'name': 'lt	std'
+        'name': 'lt std'
       },
       {
         'description': 'Lithuanian (US keyboard with Lithuanian letters)',
         'short_description': '',
-        'name': 'lt	us'
+        'name': 'lt us'
       },
       {
         'description': 'Lithuanian (IBM LST 1205-92)',
         'short_description': '',
-        'name': 'lt	ibm'
+        'name': 'lt ibm'
       },
       {
         'description': 'Lithuanian (LEKP)',
         'short_description': '',
-        'name': 'lt	lekp'
+        'name': 'lt lekp'
       },
       {
         'description': 'Lithuanian (LEKPa)',
         'short_description': '',
-        'name': 'lt	lekpa'
+        'name': 'lt lekpa'
       },
       {
         'description': 'Latvian',
@@ -1405,32 +1405,32 @@ if (!('lightdm' in window)) {
       {
         'description': 'Latvian (apostrophe variant)',
         'short_description': '',
-        'name': 'lv	apostrophe'
+        'name': 'lv apostrophe'
       },
       {
         'description': 'Latvian (tilde variant)',
         'short_description': '',
-        'name': 'lv	tilde'
+        'name': 'lv tilde'
       },
       {
         'description': 'Latvian (F variant)',
         'short_description': '',
-        'name': 'lv	fkey'
+        'name': 'lv fkey'
       },
       {
         'description': 'Latvian (modern)',
         'short_description': '',
-        'name': 'lv	modern'
+        'name': 'lv modern'
       },
       {
         'description': 'Latvian (ergonomic, ŪGJRMV)',
         'short_description': '',
-        'name': 'lv	ergonomic'
+        'name': 'lv ergonomic'
       },
       {
         'description': 'Latvian (adapted)',
         'short_description': '',
-        'name': 'lv	adapted'
+        'name': 'lv adapted'
       },
       {
         'description': 'Maori',
@@ -1445,37 +1445,37 @@ if (!('lightdm' in window)) {
       {
         'description': 'Montenegrin (Cyrillic)',
         'short_description': '',
-        'name': 'me	cyrillic'
+        'name': 'me cyrillic'
       },
       {
         'description': 'Montenegrin (Cyrillic, Z and ZHE swapped)',
         'short_description': '',
-        'name': 'me	cyrillicyz'
+        'name': 'me cyrillicyz'
       },
       {
         'description': 'Montenegrin (Latin Unicode)',
         'short_description': '',
-        'name': 'me	latinunicode'
+        'name': 'me latinunicode'
       },
       {
         'description': 'Montenegrin (Latin qwerty)',
         'short_description': '',
-        'name': 'me	latinyz'
+        'name': 'me latinyz'
       },
       {
         'description': 'Montenegrin (Latin Unicode qwerty)',
         'short_description': '',
-        'name': 'me	latinunicodeyz'
+        'name': 'me latinunicodeyz'
       },
       {
         'description': 'Montenegrin (Cyrillic with guillemets)',
         'short_description': '',
-        'name': 'me	cyrillicalternatequotes'
+        'name': 'me cyrillicalternatequotes'
       },
       {
         'description': 'Montenegrin (Latin with guillemets)',
         'short_description': '',
-        'name': 'me	latinalternatequotes'
+        'name': 'me latinalternatequotes'
       },
       {
         'description': 'Macedonian',
@@ -1485,7 +1485,7 @@ if (!('lightdm' in window)) {
       {
         'description': 'Macedonian (eliminate dead keys)',
         'short_description': '',
-        'name': 'mk	nodeadkeys'
+        'name': 'mk nodeadkeys'
       },
       {
         'description': 'Maltese',
@@ -1495,7 +1495,7 @@ if (!('lightdm' in window)) {
       {
         'description': 'Maltese (with US layout)',
         'short_description': '',
-        'name': 'mt	us'
+        'name': 'mt us'
       },
       {
         'description': 'Mongolian',
@@ -1510,32 +1510,32 @@ if (!('lightdm' in window)) {
       {
         'description': 'Norwegian (eliminate dead keys)',
         'short_description': '',
-        'name': 'no	nodeadkeys'
+        'name': 'no nodeadkeys'
       },
       {
         'description': 'Norwegian (Dvorak)',
         'short_description': '',
-        'name': 'no	dvorak'
+        'name': 'no dvorak'
       },
       {
         'description': 'Northern Saami (Norway)',
         'short_description': '',
-        'name': 'no	smi'
+        'name': 'no smi'
       },
       {
         'description': 'Northern Saami (Norway, eliminate dead keys)',
         'short_description': '',
-        'name': 'no	smi_nodeadkeys'
+        'name': 'no smi_nodeadkeys'
       },
       {
         'description': 'Norwegian (Macintosh)',
         'short_description': '',
-        'name': 'no	mac'
+        'name': 'no mac'
       },
       {
         'description': 'Norwegian (Macintosh, eliminate dead keys)',
         'short_description': '',
-        'name': 'no	mac_nodeadkeys'
+        'name': 'no mac_nodeadkeys'
       },
       {
         'description': 'Polish',
@@ -1545,37 +1545,37 @@ if (!('lightdm' in window)) {
       {
         'description': 'Polish (qwertz)',
         'short_description': '',
-        'name': 'pl	qwertz'
+        'name': 'pl qwertz'
       },
       {
         'description': 'Polish (Dvorak)',
         'short_description': '',
-        'name': 'pl	dvorak'
+        'name': 'pl dvorak'
       },
       {
         'description': 'Polish (Dvorak, Polish quotes on quotemark key)',
         'short_description': '',
-        'name': 'pl	dvorak_quotes'
+        'name': 'pl dvorak_quotes'
       },
       {
         'description': 'Polish (Dvorak, Polish quotes on key 1)',
         'short_description': '',
-        'name': 'pl	dvorak_altquotes'
+        'name': 'pl dvorak_altquotes'
       },
       {
         'description': 'Kashubian',
         'short_description': '',
-        'name': 'pl	csb'
+        'name': 'pl csb'
       },
       {
         'description': 'Russian (Poland, phonetic Dvorak)',
         'short_description': 'ru',
-        'name': 'pl	ru_phonetic_dvorak'
+        'name': 'pl ru_phonetic_dvorak'
       },
       {
         'description': 'Polish (programmer Dvorak)',
         'short_description': '',
-        'name': 'pl	dvp'
+        'name': 'pl dvp'
       },
       {
         'description': 'Portuguese',
@@ -1585,42 +1585,42 @@ if (!('lightdm' in window)) {
       {
         'description': 'Portuguese (eliminate dead keys)',
         'short_description': '',
-        'name': 'pt	nodeadkeys'
+        'name': 'pt nodeadkeys'
       },
       {
         'description': 'Portuguese (Sun dead keys)',
         'short_description': '',
-        'name': 'pt	sundeadkeys'
+        'name': 'pt sundeadkeys'
       },
       {
         'description': 'Portuguese (Macintosh)',
         'short_description': '',
-        'name': 'pt	mac'
+        'name': 'pt mac'
       },
       {
         'description': 'Portuguese (Macintosh, eliminate dead keys)',
         'short_description': '',
-        'name': 'pt	mac_nodeadkeys'
+        'name': 'pt mac_nodeadkeys'
       },
       {
         'description': 'Portuguese (Macintosh, Sun dead keys)',
         'short_description': '',
-        'name': 'pt	mac_sundeadkeys'
+        'name': 'pt mac_sundeadkeys'
       },
       {
         'description': 'Portuguese (Nativo)',
         'short_description': '',
-        'name': 'pt	nativo'
+        'name': 'pt nativo'
       },
       {
         'description': 'Portuguese (Nativo for USA keyboards)',
         'short_description': '',
-        'name': 'pt	nativo-us'
+        'name': 'pt nativo-us'
       },
       {
         'description': 'Esperanto (Portugal, Nativo)',
         'short_description': '',
-        'name': 'pt	nativo-epo'
+        'name': 'pt nativo-epo'
       },
       {
         'description': 'Romanian',
@@ -1630,22 +1630,22 @@ if (!('lightdm' in window)) {
       {
         'description': 'Romanian (cedilla)',
         'short_description': '',
-        'name': 'ro	cedilla'
+        'name': 'ro cedilla'
       },
       {
         'description': 'Romanian (standard)',
         'short_description': '',
-        'name': 'ro	std'
+        'name': 'ro std'
       },
       {
         'description': 'Romanian (standard cedilla)',
         'short_description': '',
-        'name': 'ro	std_cedilla'
+        'name': 'ro std_cedilla'
       },
       {
         'description': 'Romanian (WinKeys)',
         'short_description': '',
-        'name': 'ro	winkeys'
+        'name': 'ro winkeys'
       },
       {
         'description': 'Russian',
@@ -1655,92 +1655,92 @@ if (!('lightdm' in window)) {
       {
         'description': 'Russian (phonetic)',
         'short_description': '',
-        'name': 'ru	phonetic'
+        'name': 'ru phonetic'
       },
       {
         'description': 'Russian (phonetic WinKeys)',
         'short_description': '',
-        'name': 'ru	phonetic_winkeys'
+        'name': 'ru phonetic_winkeys'
       },
       {
         'description': 'Russian (typewriter)',
         'short_description': '',
-        'name': 'ru	typewriter'
+        'name': 'ru typewriter'
       },
       {
         'description': 'Russian (legacy)',
         'short_description': '',
-        'name': 'ru	legacy'
+        'name': 'ru legacy'
       },
       {
         'description': 'Russian (typewriter, legacy)',
         'short_description': '',
-        'name': 'ru	typewriter-legacy'
+        'name': 'ru typewriter-legacy'
       },
       {
         'description': 'Tatar',
         'short_description': '',
-        'name': 'ru	tt'
+        'name': 'ru tt'
       },
       {
         'description': 'Ossetian (legacy)',
         'short_description': '',
-        'name': 'ru	os_legacy'
+        'name': 'ru os_legacy'
       },
       {
         'description': 'Ossetian (WinKeys)',
         'short_description': '',
-        'name': 'ru	os_winkeys'
+        'name': 'ru os_winkeys'
       },
       {
         'description': 'Chuvash',
         'short_description': '',
-        'name': 'ru	cv'
+        'name': 'ru cv'
       },
       {
         'description': 'Chuvash (Latin)',
         'short_description': '',
-        'name': 'ru	cv_latin'
+        'name': 'ru cv_latin'
       },
       {
         'description': 'Udmurt',
         'short_description': '',
-        'name': 'ru	udm'
+        'name': 'ru udm'
       },
       {
         'description': 'Komi',
         'short_description': '',
-        'name': 'ru	kom'
+        'name': 'ru kom'
       },
       {
         'description': 'Yakut',
         'short_description': '',
-        'name': 'ru	sah'
+        'name': 'ru sah'
       },
       {
         'description': 'Kalmyk',
         'short_description': '',
-        'name': 'ru	xal'
+        'name': 'ru xal'
       },
       {
         'description': 'Russian (DOS)',
         'short_description': '',
-        'name': 'ru	dos'
+        'name': 'ru dos'
       },
       {
         'description': 'Serbian (Russia)',
         'short_description': '',
-        'name': 'ru	srp'
+        'name': 'ru srp'
       },
       {
         'description': 'Bashkirian',
         'short_description': '',
-        'name': 'ru	bak'
+        'name': 'ru bak'
       },
       {
         'description': 'Mari',
         'short_description': '',
-        'name': 'ru	chm'
+        'name': 'ru chm'
       },
       {
         'description': 'Serbian (Cyrillic)',
@@ -1750,42 +1750,42 @@ if (!('lightdm' in window)) {
       {
         'description': 'Serbian (Cyrillic, Z and ZHE swapped)',
         'short_description': '',
-        'name': 'rs	yz'
+        'name': 'rs yz'
       },
       {
         'description': 'Serbian (Latin)',
         'short_description': '',
-        'name': 'rs	latin'
+        'name': 'rs latin'
       },
       {
         'description': 'Serbian (Latin Unicode)',
         'short_description': '',
-        'name': 'rs	latinunicode'
+        'name': 'rs latinunicode'
       },
       {
         'description': 'Serbian (Latin qwerty)',
         'short_description': '',
-        'name': 'rs	latinyz'
+        'name': 'rs latinyz'
       },
       {
         'description': 'Serbian (Latin Unicode qwerty)',
         'short_description': '',
-        'name': 'rs	latinunicodeyz'
+        'name': 'rs latinunicodeyz'
       },
       {
         'description': 'Serbian (Cyrillic with guillemets)',
         'short_description': '',
-        'name': 'rs	alternatequotes'
+        'name': 'rs alternatequotes'
       },
       {
         'description': 'Serbian (Latin with guillemets)',
         'short_description': '',
-        'name': 'rs	latinalternatequotes'
+        'name': 'rs latinalternatequotes'
       },
       {
         'description': 'Pannonian Rusyn (homophonic)',
         'short_description': '',
-        'name': 'rs	rue'
+        'name': 'rs rue'
       },
       {
         'description': 'Slovenian',
@@ -1795,12 +1795,12 @@ if (!('lightdm' in window)) {
       {
         'description': 'Slovenian (use guillemets for quotes)',
         'short_description': '',
-        'name': 'si	alternatequotes'
+        'name': 'si alternatequotes'
       },
       {
         'description': 'Slovenian (US keyboard with Slovenian letters)',
         'short_description': '',
-        'name': 'si	us'
+        'name': 'si us'
       },
       {
         'description': 'Slovak',
@@ -1810,17 +1810,17 @@ if (!('lightdm' in window)) {
       {
         'description': 'Slovak (extended Backslash)',
         'short_description': '',
-        'name': 'sk	bksl'
+        'name': 'sk bksl'
       },
       {
         'description': 'Slovak (qwerty)',
         'short_description': '',
-        'name': 'sk	qwerty'
+        'name': 'sk qwerty'
       },
       {
         'description': 'Slovak (qwerty, extended Backslash)',
         'short_description': '',
-        'name': 'sk	qwerty_bksl'
+        'name': 'sk qwerty_bksl'
       },
       {
         'description': 'Spanish',
@@ -1830,37 +1830,37 @@ if (!('lightdm' in window)) {
       {
         'description': 'Spanish (eliminate dead keys)',
         'short_description': '',
-        'name': 'es	nodeadkeys'
+        'name': 'es nodeadkeys'
       },
       {
         'description': 'Spanish (include dead tilde)',
         'short_description': '',
-        'name': 'es	deadtilde'
+        'name': 'es deadtilde'
       },
       {
         'description': 'Spanish (Sun dead keys)',
         'short_description': '',
-        'name': 'es	sundeadkeys'
+        'name': 'es sundeadkeys'
       },
       {
         'description': 'Spanish (Dvorak)',
         'short_description': '',
-        'name': 'es	dvorak'
+        'name': 'es dvorak'
       },
       {
         'description': 'Asturian (Spain, with bottom-dot H and bottom-dot L)',
         'short_description': '',
-        'name': 'es	ast'
+        'name': 'es ast'
       },
       {
         'description': 'Catalan (Spain, with middle-dot L)',
         'short_description': '',
-        'name': 'es	cat'
+        'name': 'es cat'
       },
       {
         'description': 'Spanish (Macintosh)',
         'short_description': '',
-        'name': 'es	mac'
+        'name': 'es mac'
       },
       {
         'description': 'Swedish',
@@ -1870,42 +1870,42 @@ if (!('lightdm' in window)) {
       {
         'description': 'Swedish (eliminate dead keys)',
         'short_description': '',
-        'name': 'se	nodeadkeys'
+        'name': 'se nodeadkeys'
       },
       {
         'description': 'Swedish (Dvorak)',
         'short_description': '',
-        'name': 'se	dvorak'
+        'name': 'se dvorak'
       },
       {
         'description': 'Russian (Sweden, phonetic)',
         'short_description': 'ru',
-        'name': 'se	rus'
+        'name': 'se rus'
       },
       {
         'description': 'Russian (Sweden, phonetic, eliminate dead keys)',
         'short_description': 'ru',
-        'name': 'se	rus_nodeadkeys'
+        'name': 'se rus_nodeadkeys'
       },
       {
         'description': 'Northern Saami (Sweden)',
         'short_description': '',
-        'name': 'se	smi'
+        'name': 'se smi'
       },
       {
         'description': 'Swedish (Macintosh)',
         'short_description': '',
-        'name': 'se	mac'
+        'name': 'se mac'
       },
       {
         'description': 'Swedish (Svdvorak)',
         'short_description': '',
-        'name': 'se	svdvorak'
+        'name': 'se svdvorak'
       },
       {
         'description': 'Swedish Sign Language',
         'short_description': '',
-        'name': 'se	swl'
+        'name': 'se swl'
       },
       {
         'description': 'German (Switzerland)',
@@ -1915,42 +1915,42 @@ if (!('lightdm' in window)) {
       {
         'description': 'German (Switzerland, legacy)',
         'short_description': '',
-        'name': 'ch	legacy'
+        'name': 'ch legacy'
       },
       {
         'description': 'German (Switzerland, eliminate dead keys)',
         'short_description': 'de',
-        'name': 'ch	de_nodeadkeys'
+        'name': 'ch de_nodeadkeys'
       },
       {
         'description': 'German (Switzerland, Sun dead keys)',
         'short_description': 'de',
-        'name': 'ch	de_sundeadkeys'
+        'name': 'ch de_sundeadkeys'
       },
       {
         'description': 'French (Switzerland)',
         'short_description': 'fr',
-        'name': 'ch	fr'
+        'name': 'ch fr'
       },
       {
         'description': 'French (Switzerland, eliminate dead keys)',
         'short_description': 'fr',
-        'name': 'ch	fr_nodeadkeys'
+        'name': 'ch fr_nodeadkeys'
       },
       {
         'description': 'French (Switzerland, Sun dead keys)',
         'short_description': 'fr',
-        'name': 'ch	fr_sundeadkeys'
+        'name': 'ch fr_sundeadkeys'
       },
       {
         'description': 'French (Switzerland, Macintosh)',
         'short_description': 'fr',
-        'name': 'ch	fr_mac'
+        'name': 'ch fr_mac'
       },
       {
         'description': 'German (Switzerland, Macintosh)',
         'short_description': 'de',
-        'name': 'ch	de_mac'
+        'name': 'ch de_mac'
       },
       {
         'description': 'Arabic (Syria)',
@@ -1960,27 +1960,27 @@ if (!('lightdm' in window)) {
       {
         'description': 'Syriac',
         'short_description': 'syc',
-        'name': 'sy	syc'
+        'name': 'sy syc'
       },
       {
         'description': 'Syriac (phonetic)',
         'short_description': 'syc',
-        'name': 'sy	syc_phonetic'
+        'name': 'sy syc_phonetic'
       },
       {
         'description': 'Kurdish (Syria, Latin Q)',
         'short_description': 'ku',
-        'name': 'sy	ku'
+        'name': 'sy ku'
       },
       {
         'description': 'Kurdish (Syria, F)',
         'short_description': 'ku',
-        'name': 'sy	ku_f'
+        'name': 'sy ku_f'
       },
       {
         'description': 'Kurdish (Syria, Latin Alt-Q)',
         'short_description': 'ku',
-        'name': 'sy	ku_alt'
+        'name': 'sy ku_alt'
       },
       {
         'description': 'Tajik',
@@ -1990,7 +1990,7 @@ if (!('lightdm' in window)) {
       {
         'description': 'Tajik (legacy)',
         'short_description': '',
-        'name': 'tj	legacy'
+        'name': 'tj legacy'
       },
       {
         'description': 'Sinhala (phonetic)',
@@ -2000,12 +2000,12 @@ if (!('lightdm' in window)) {
       {
         'description': 'Tamil (Sri Lanka, Unicode)',
         'short_description': 'ta',
-        'name': 'lk	tam_unicode'
+        'name': 'lk tam_unicode'
       },
       {
         'description': 'Tamil (Sri Lanka, TAB Typewriter)',
         'short_description': '',
-        'name': 'lk	tam_TAB'
+        'name': 'lk tam_TAB'
       },
       {
         'description': 'Thai',
@@ -2015,12 +2015,12 @@ if (!('lightdm' in window)) {
       {
         'description': 'Thai (TIS-820.2538)',
         'short_description': '',
-        'name': 'th	tis'
+        'name': 'th tis'
       },
       {
         'description': 'Thai (Pattachote)',
         'short_description': '',
-        'name': 'th	pat'
+        'name': 'th pat'
       },
       {
         'description': 'Turkish',
@@ -2030,52 +2030,52 @@ if (!('lightdm' in window)) {
       {
         'description': 'Turkish (F)',
         'short_description': '',
-        'name': 'tr	f'
+        'name': 'tr f'
       },
       {
         'description': 'Turkish (Alt-Q)',
         'short_description': '',
-        'name': 'tr	alt'
+        'name': 'tr alt'
       },
       {
         'description': 'Turkish (Sun dead keys)',
         'short_description': '',
-        'name': 'tr	sundeadkeys'
+        'name': 'tr sundeadkeys'
       },
       {
         'description': 'Kurdish (Turkey, Latin Q)',
         'short_description': 'ku',
-        'name': 'tr	ku'
+        'name': 'tr ku'
       },
       {
         'description': 'Kurdish (Turkey, F)',
         'short_description': 'ku',
-        'name': 'tr	ku_f'
+        'name': 'tr ku_f'
       },
       {
         'description': 'Kurdish (Turkey, Latin Alt-Q)',
         'short_description': 'ku',
-        'name': 'tr	ku_alt'
+        'name': 'tr ku_alt'
       },
       {
         'description': 'Turkish (international with dead keys)',
         'short_description': '',
-        'name': 'tr	intl'
+        'name': 'tr intl'
       },
       {
         'description': 'Crimean Tatar (Turkish Q)',
         'short_description': 'crh',
-        'name': 'tr	crh'
+        'name': 'tr crh'
       },
       {
         'description': 'Crimean Tatar (Turkish F)',
         'short_description': 'crh',
-        'name': 'tr	crh_f'
+        'name': 'tr crh_f'
       },
       {
         'description': 'Crimean Tatar (Turkish Alt-Q)',
         'short_description': 'crh',
-        'name': 'tr	crh_alt'
+        'name': 'tr crh_alt'
       },
       {
         'description': 'Taiwanese',
@@ -2085,12 +2085,12 @@ if (!('lightdm' in window)) {
       {
         'description': 'Taiwanese (indigenous)',
         'short_description': '',
-        'name': 'tw	indigenous'
+        'name': 'tw indigenous'
       },
       {
         'description': 'Saisiyat (Taiwan)',
         'short_description': 'xsy',
-        'name': 'tw	saisiyat'
+        'name': 'tw saisiyat'
       },
       {
         'description': 'Ukrainian',
@@ -2100,37 +2100,37 @@ if (!('lightdm' in window)) {
       {
         'description': 'Ukrainian (phonetic)',
         'short_description': '',
-        'name': 'ua	phonetic'
+        'name': 'ua phonetic'
       },
       {
         'description': 'Ukrainian (typewriter)',
         'short_description': '',
-        'name': 'ua	typewriter'
+        'name': 'ua typewriter'
       },
       {
         'description': 'Ukrainian (WinKeys)',
         'short_description': '',
-        'name': 'ua	winkeys'
+        'name': 'ua winkeys'
       },
       {
         'description': 'Ukrainian (legacy)',
         'short_description': '',
-        'name': 'ua	legacy'
+        'name': 'ua legacy'
       },
       {
         'description': 'Ukrainian (standard RSTU)',
         'short_description': '',
-        'name': 'ua	rstu'
+        'name': 'ua rstu'
       },
       {
         'description': 'Russian (Ukraine, standard RSTU)',
         'short_description': '',
-        'name': 'ua	rstu_ru'
+        'name': 'ua rstu_ru'
       },
       {
         'description': 'Ukrainian (homophonic)',
         'short_description': '',
-        'name': 'ua	homophonic'
+        'name': 'ua homophonic'
       },
       {
         'description': 'English (UK)',
@@ -2140,37 +2140,37 @@ if (!('lightdm' in window)) {
       {
         'description': 'English (UK, extended WinKeys)',
         'short_description': '',
-        'name': 'gb	extd'
+        'name': 'gb extd'
       },
       {
         'description': 'English (UK, international with dead keys)',
         'short_description': '',
-        'name': 'gb	intl'
+        'name': 'gb intl'
       },
       {
         'description': 'English (UK, Dvorak)',
         'short_description': '',
-        'name': 'gb	dvorak'
+        'name': 'gb dvorak'
       },
       {
         'description': 'English (UK, Dvorak with UK punctuation)',
         'short_description': '',
-        'name': 'gb	dvorakukp'
+        'name': 'gb dvorakukp'
       },
       {
         'description': 'English (UK, Macintosh)',
         'short_description': '',
-        'name': 'gb	mac'
+        'name': 'gb mac'
       },
       {
         'description': 'English (UK, Macintosh international)',
         'short_description': '',
-        'name': 'gb	mac_intl'
+        'name': 'gb mac_intl'
       },
       {
         'description': 'English (UK, Colemak)',
         'short_description': '',
-        'name': 'gb	colemak'
+        'name': 'gb colemak'
       },
       {
         'description': 'Uzbek',
@@ -2180,7 +2180,7 @@ if (!('lightdm' in window)) {
       {
         'description': 'Uzbek (Latin)',
         'short_description': '',
-        'name': 'uz	latin'
+        'name': 'uz latin'
       },
       {
         'description': 'Vietnamese',
@@ -2195,7 +2195,7 @@ if (!('lightdm' in window)) {
       {
         'description': 'Korean (101/104 key compatible)',
         'short_description': '',
-        'name': 'kr	kr104'
+        'name': 'kr kr104'
       },
       {
         'description': 'Japanese (PC-98xx Series)',
@@ -2210,22 +2210,22 @@ if (!('lightdm' in window)) {
       {
         'description': 'CloGaelach',
         'short_description': '',
-        'name': 'ie	CloGaelach'
+        'name': 'ie CloGaelach'
       },
       {
         'description': 'Irish (UnicodeExpert)',
         'short_description': '',
-        'name': 'ie	UnicodeExpert'
+        'name': 'ie UnicodeExpert'
       },
       {
         'description': 'Ogham',
         'short_description': '',
-        'name': 'ie	ogam'
+        'name': 'ie ogam'
       },
       {
         'description': 'Ogham (IS434)',
         'short_description': '',
-        'name': 'ie	ogam_is434'
+        'name': 'ie ogam_is434'
       },
       {
         'description': 'Urdu (Pakistan)',
@@ -2235,22 +2235,22 @@ if (!('lightdm' in window)) {
       {
         'description': 'Urdu (Pakistan, CRULP)',
         'short_description': '',
-        'name': 'pk	urd-crulp'
+        'name': 'pk urd-crulp'
       },
       {
         'description': 'Urdu (Pakistan, NLA)',
         'short_description': '',
-        'name': 'pk	urd-nla'
+        'name': 'pk urd-nla'
       },
       {
         'description': 'Arabic (Pakistan)',
         'short_description': 'ar',
-        'name': 'pk	ara'
+        'name': 'pk ara'
       },
       {
         'description': 'Sindhi',
         'short_description': 'sd',
-        'name': 'pk	snd'
+        'name': 'pk snd'
       },
       {
         'description': 'Dhivehi',
@@ -2270,7 +2270,7 @@ if (!('lightdm' in window)) {
       {
         'description': 'Esperanto (displaced semicolon and quote, obsolete)',
         'short_description': '',
-        'name': 'epo	legacy'
+        'name': 'epo legacy'
       },
       {
         'description': 'Nepali',
@@ -2285,17 +2285,17 @@ if (!('lightdm' in window)) {
       {
         'description': 'Igbo',
         'short_description': 'ig',
-        'name': 'ng	igbo'
+        'name': 'ng igbo'
       },
       {
         'description': 'Yoruba',
         'short_description': 'yo',
-        'name': 'ng	yoruba'
+        'name': 'ng yoruba'
       },
       {
         'description': 'Hausa',
         'short_description': 'ha',
-        'name': 'ng	hausa'
+        'name': 'ng hausa'
       },
       {
         'description': 'Amharic',
@@ -2315,12 +2315,12 @@ if (!('lightdm' in window)) {
       {
         'description': 'Braille (left hand)',
         'short_description': '',
-        'name': 'brai	left_hand'
+        'name': 'brai left_hand'
       },
       {
         'description': 'Braille (right hand)',
         'short_description': '',
-        'name': 'brai	right_hand'
+        'name': 'brai right_hand'
       },
       {
         'description': 'Turkmen',
@@ -2330,7 +2330,7 @@ if (!('lightdm' in window)) {
       {
         'description': 'Turkmen (Alt-Q)',
         'short_description': '',
-        'name': 'tm	alt'
+        'name': 'tm alt'
       },
       {
         'description': 'Bambara',
@@ -2340,17 +2340,17 @@ if (!('lightdm' in window)) {
       {
         'description': 'French (Mali, alternative)',
         'short_description': 'fr',
-        'name': 'ml	fr-oss'
+        'name': 'ml fr-oss'
       },
       {
         'description': 'English (Mali, US Macintosh)',
         'short_description': 'en',
-        'name': 'ml	us-mac'
+        'name': 'ml us-mac'
       },
       {
         'description': 'English (Mali, US international)',
         'short_description': 'en',
-        'name': 'ml	us-intl'
+        'name': 'ml us-intl'
       },
       {
         'description': 'Swahili (Tanzania)',
@@ -2365,7 +2365,7 @@ if (!('lightdm' in window)) {
       {
         'description': 'Kikuyu',
         'short_description': 'ki',
-        'name': 'ke	kik'
+        'name': 'ke kik'
       },
       {
         'description': 'Tswana',
@@ -2380,47 +2380,47 @@ if (!('lightdm' in window)) {
       {
         'description': 'Filipino (QWERTY Baybayin)',
         'short_description': '',
-        'name': 'ph	qwerty-bay'
+        'name': 'ph qwerty-bay'
       },
       {
         'description': 'Filipino (Capewell-Dvorak Latin)',
         'short_description': '',
-        'name': 'ph	capewell-dvorak'
+        'name': 'ph capewell-dvorak'
       },
       {
         'description': 'Filipino (Capewell-Dvorak Baybayin)',
         'short_description': '',
-        'name': 'ph	capewell-dvorak-bay'
+        'name': 'ph capewell-dvorak-bay'
       },
       {
         'description': 'Filipino (Capewell-QWERF 2006 Latin)',
         'short_description': '',
-        'name': 'ph	capewell-qwerf2k6'
+        'name': 'ph capewell-qwerf2k6'
       },
       {
         'description': 'Filipino (Capewell-QWERF 2006 Baybayin)',
         'short_description': '',
-        'name': 'ph	capewell-qwerf2k6-bay'
+        'name': 'ph capewell-qwerf2k6-bay'
       },
       {
         'description': 'Filipino (Colemak Latin)',
         'short_description': '',
-        'name': 'ph	colemak'
+        'name': 'ph colemak'
       },
       {
         'description': 'Filipino (Colemak Baybayin)',
         'short_description': '',
-        'name': 'ph	colemak-bay'
+        'name': 'ph colemak-bay'
       },
       {
         'description': 'Filipino (Dvorak Latin)',
         'short_description': '',
-        'name': 'ph	dvorak'
+        'name': 'ph dvorak'
       },
       {
         'description': 'Filipino (Dvorak Baybayin)',
         'short_description': '',
-        'name': 'ph	dvorak-bay'
+        'name': 'ph dvorak-bay'
       }
     ],
     'default_language': '',
@@ -2447,6 +2447,21 @@ if (!('lightdm' in window)) {
         'name': 'Xfce Session',
         'key': 'xfce',
         'comment': 'Use this session to run Xfce as your desktop environment'
+      },
+      {
+        'name': 'Gnome',
+        'key': 'gnome',
+        'comment': 'Use this session to run Gnome as your desktop environment'
+      },
+      {
+        'name': 'KDE',
+        'key': 'kde',
+        'comment': 'Use this session to run KDE as your desktop environment'
+      },
+      {
+        'name': 'MATE',
+        'key': 'mate',
+        'comment': 'Use this session to run MATE as your desktop environment'
       }
     ],
     'users': [
@@ -2497,7 +2512,7 @@ if (!('lightdm' in window)) {
   window.lightdm.cancel_timed_login = function () {};
   window.lightdm.start_authentication = function () {};
   window.lightdm.login = function (user, password) {
-    alert('You have logged in!');
+    window.alert('You have logged in!');
     window.location = window.location;
   };
   window.lightdm.provide_secret = function () {
