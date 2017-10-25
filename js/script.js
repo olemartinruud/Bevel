@@ -1,11 +1,13 @@
 // Constants
-var AUTHENTICATION_BEGIN_MESSAGE = 'Logging in...';
+var AUTHENTICATION_BEGIN_MESSAGE = 'Authenticating...';
 // var AUTHENTICATION_SUCCUESS_MESSAGE = ''; // Should never actually show.
 var AUTHENTICATION_FAILURE_MESSAGE = 'Incorrect password';
 var PLACEHOLDER_COLOURS = ['#FF6138', '#FFFF9D', '#BEEB9F', '#79BD8F', '#00A388'];
 var THEME_FOLDER = '/usr/share/lightdm-webkit/themes/bevelhex/';
 var ICON_FOLDER = THEME_FOLDER + 'resources/icons/hex/';
 var DUMMY_FOLDER = THEME_FOLDER + 'resources/dummy/';
+var CLOCK_FORMAT = 'HH:mm';
+var CLOCK_UPDATE_TIME_MS = 60000;
 
 // Globals
 var authenticating = false;
@@ -388,12 +390,12 @@ function selectRandomBackgroundImage (folderPath) {
 function initializeClock () {
   var clock = $('#big-clock');
   if (window.moment) {
-    clock.html(moment().format('HH:mm:ss'));
+    clock.html(moment().format(CLOCK_FORMAT));
     setInterval(() => {
-      clock.html(moment().format('HH:mm:ss'));
-    }, 1000);
+      clock.html(moment().format(CLOCK_FORMAT));
+    }, CLOCK_UPDATE_TIME_MS);
   } else {
-    clock.html('12:00:00');
+    clock.html('12:00');
   }
 }
 
